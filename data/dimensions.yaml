@@ -1,0 +1,53 @@
+tower_height:
+  value: 80.0
+  unit: m
+  confidence: high
+  scope: west_towers
+  exterior_direct: true
+  source_id: official_elisabethkirche
+  note: "Approximate tower height stated by the official church source."
+
+crossing_square_side:
+  value: 10.0
+  unit: m
+  confidence: high
+  scope: crossing
+  exterior_direct: false
+  source_id: official_elisabethkirche
+  note: "Interior structural scale anchor; do not equate directly to exterior wall-to-wall dimension."
+
+vault_height:
+  value: 20.20
+  unit: m
+  confidence: high
+  scope: hall
+  exterior_direct: false
+  source_id: official_elisabethkirche
+  note: "Vertical scale cross-check, not an exterior surface dimension."
+
+hall_total_width:
+  value: 21.55
+  unit: m
+  confidence: high
+  scope: three_aisled_hall
+  exterior_direct: false
+  source_id: official_elisabethkirche
+  note: "Use carefully when fitting exterior wall thickness."
+
+transept_width:
+  value: 39.0
+  unit: m
+  confidence: high
+  scope: transept
+  exterior_direct: false
+  source_id: dehio
+  note: "Scholarly dimensional cross-check."
+
+inner_length_without_west_hall:
+  value: 56.0
+  unit: m
+  confidence: high
+  scope: longitudinal
+  exterior_direct: false
+  source_id: dehio
+  note: "Interior length; not the overall exterior building length."
