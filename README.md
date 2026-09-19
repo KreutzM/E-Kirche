@@ -21,7 +21,7 @@ historischen Plänen und explizit dokumentierten geometrischen Annahmen.
 1. Lies zuerst `AGENTS.md`.
 2. Lies `PROJECT.md`.
 3. Prüfe `data/dimensions.yaml`, `data/manifest.json` und `docs/evidence_policy.md`.
-4. Nutze `make validate`, bevor du Geometrie änderst.
+4. Nutze `python scripts/validate_dataset.py`, bevor du Geometrie änderst.
 5. Arbeite coarse-to-fine und dokumentiere jede neue Annahme.
 
 ## Referenzdaten
@@ -40,3 +40,37 @@ python scripts/make_contact_sheets.py
 ```
 
 Blender-Dateien und große Binärartefakte sind für Git LFS vorbereitet.
+
+## Blender starten (auch Windows ohne PATH-Eintrag)
+
+```bash
+git lfs install --local
+python scripts/run_blender.py smoke
+python scripts/run_blender.py scene
+```
+
+Der Runner findet Blender im PATH oder im Windows-Standardverzeichnis. Alternativ
+`--blender "C:/Pfad/blender.exe"` angeben oder `BLENDER_EXE` setzen. Der Smoke-Test
+prüft CPU-Rendering und Speichern/Öffnen in `tmp/`. `scene` erstellt nur die leere
+Projektszene mit Maßhilfen und verweigert das Überschreiben einer vorhandenen Szene.
+Die Hallenbreite liegt auf Y, die Längsrichtung auf X. YAML wird durch das normale
+Python gelesen; Blender benötigt keine zusätzlich installierten Python-Pakete.
+
+Vor Modellierungsstart:
+
+```bash
+python scripts/validate_dataset.py --assets
+python -m unittest discover -s tests -v
+```
+
+`--assets` verlangt lesbare Priority-1-Bilder; die normale Datenprüfung benötigt
+keine Downloads. Der Downloader erhält bestehende Referenzen und hängt Provenienz
+sowie Downloadberichte an. Wiederholungen prüfen Dateihashes; eine andere Auflösung
+wird nicht über vorhandene Evidenz geschrieben. Fehler liefern einen Fehler-Exitcode.
+Die Provenienz enthält Zeitpunkt, tatsächliche Download-URL und SHA-256 der lokalen
+Datei; Commons-Abmessungen und Commons-SHA1 beziehen sich auf das Original.
+
+Nach Erstellung und dokumentierter Kalibrierung der `VAL_*`-Kameras:
+`python scripts/run_blender.py render`.
+
+Prüfstand und offene Startbedingungen: [docs/readiness.md](docs/readiness.md).

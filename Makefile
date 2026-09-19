@@ -16,4 +16,4 @@ contacts:
 	python scripts/make_contact_sheets.py
 
 scene:
-	blender --background --python scripts/blender/00_scene_setup.py
+	python scripts/run_blender.py scene

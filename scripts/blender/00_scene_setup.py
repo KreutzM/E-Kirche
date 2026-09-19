@@ -1,8 +1,10 @@
 from pathlib import Path
 import bpy
 
-ROOT = Path.cwd()
+ROOT = Path(__file__).resolve().parents[2]
 SCENE = ROOT/"blender"/"scene"/"elisabethkirche.blend"
+if SCENE.exists():
+    raise RuntimeError("Refusing to overwrite an existing working scene")
 
 bpy.ops.object.select_all(action="SELECT")
 bpy.ops.object.delete(use_global=False)

@@ -1,3 +1,6 @@
+# Coverage ratings describe the curated manifest, not a completed visual review.
+# Local acquisition on 2026-09-19: M01/M02/M06 available; 19 Priority-1 files
+# missing after HTTP 429. See docs/readiness.md and local sources/download_report.csv.
 west:
   status: strong
   notes: "Multiple modern facade/portal/tower views."

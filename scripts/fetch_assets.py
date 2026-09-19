@@ -4,15 +4,15 @@
 Standard library only. Licence metadata is checked live at download time.
 """
 from pathlib import Path
-import argparse, html, json, re, time, urllib.parse, urllib.request
+import argparse, csv, hashlib, html, json, re, time, urllib.error, urllib.parse, urllib.request
+from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "data" / "manifest.json"
 META = ROOT / "sources" / "commons_download_metadata.jsonl"
 REPORT = ROOT / "sources" / "download_report.csv"
 API = "https://commons.wikimedia.org/w/api.php"
-UA = "E-Kirche-reconstruction/1.0 (research)"
-ALLOWED = ("cc by", "cc-by", "cc by-sa", "cc-by-sa", "cc0", "public domain", "pdm", "gfdl")
+UA = "E-Kirche-reconstruction/1.0 (https://github.com/KreutzM/E-Kirche; research)"
 
 def clean(value):
     if not value:
@@ -59,7 +59,9 @@ def info(title, width):
     }
 
 def allowed(name):
-    return any(x in (name or "").lower() for x in ALLOWED)
+    return bool(re.fullmatch(
+        r"(?:cc[ -]by(?:[ -]sa)?(?: \d\.\d)?|cc0(?: 1\.0)?|public domain|pdm|gfdl(?: \d\.\d)?)",
+        (name or "").strip().lower()))
 
 def destination(rec):
     if rec["group"] == "modern":
@@ -71,6 +73,8 @@ def destination(rec):
     return base / f'{rec["id"]}_{Path(rec["title"]).name}'
 
 def download(url, dest):
+    if dest.exists():
+        raise FileExistsError(f"Refusing to overwrite reference: {dest}")
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(dest.suffix + ".part")
     req = urllib.request.Request(url, headers={"User-Agent":UA})
@@ -87,37 +91,69 @@ def main():
     ap.add_argument("--priority", type=int, choices=(1,2,3))
     ap.add_argument("--max-width", type=int, default=2500)
     ap.add_argument("--originals", action="store_true")
+    ap.add_argument("--delay", type=float, default=2.0, help="Seconds between assets (default: 2)")
     args = ap.parse_args()
+    if args.max_width <= 0 or args.delay < 0:
+        ap.error("max-width must be positive and delay non-negative")
 
     rows = json.loads(MANIFEST.read_text(encoding="utf-8"))
     if args.priority:
         rows = [r for r in rows if int(r["priority"]) <= args.priority]
 
-    META.write_text("", encoding="utf-8")
-    report = ["id,status,license,file,error"]
+    META.parent.mkdir(parents=True, exist_ok=True)
+    previous = {}
+    if META.exists():
+        for line in META.read_text(encoding="utf-8").splitlines():
+            record = json.loads(line)
+            previous[record["dataset_id"]] = record
+    report = []
     ok = 0
     for i, rec in enumerate(rows, 1):
         print(f'[{i}/{len(rows)}] {rec["id"]} {rec["title"]}')
         try:
+            dest = destination(rec)
+            if dest.exists():
+                old = previous.get(rec["id"], {})
+                digest = hashlib.sha256(dest.read_bytes()).hexdigest()
+                if old.get("download_sha256") != digest:
+                    raise RuntimeError("Existing reference lacks matching provenance/hash; inspect manually")
+                if old.get("requested_width") != (None if args.originals else args.max_width):
+                    raise RuntimeError("Existing reference uses a different resolution; preserve it and resolve manually")
+                report.append([rec["id"], "cached", old["license_short_name"], str(dest.relative_to(ROOT)), ""])
+                ok += 1
+                continue
             meta = info(rec["title"], None if args.originals else args.max_width)
             if not allowed(meta["license_short_name"]):
                 raise RuntimeError(f'licence not accepted: {meta["license_short_name"]!r}')
             url = meta["original_url"] if args.originals else (meta["thumb_url"] or meta["original_url"])
-            dest = destination(rec)
             download(url, dest)
             meta.update({"dataset_id":rec["id"],"title":rec["title"],"commons_page":rec["commons_page"],
-                         "downloaded_to":str(dest.relative_to(ROOT))})
+                         "downloaded_to":str(dest.relative_to(ROOT)),
+                         "download_url":url,
+                         "retrieved_at":datetime.now(timezone.utc).isoformat(),
+                         "requested_width":None if args.originals else args.max_width,
+                         "download_sha256":hashlib.sha256(dest.read_bytes()).hexdigest()})
             with META.open("a", encoding="utf-8") as f:
                 f.write(json.dumps(meta, ensure_ascii=False)+"\n")
-            report.append(f'{rec["id"]},downloaded,"{meta["license_short_name"]}","{dest.relative_to(ROOT)}",')
+            report.append([rec["id"], "downloaded", meta["license_short_name"], str(dest.relative_to(ROOT)), ""])
             ok += 1
         except Exception as exc:
-            msg = str(exc).replace('"','""')
-            report.append(f'{rec["id"]},ERROR,,,"{msg}"')
+            report.append([rec["id"], "ERROR", "", "", str(exc)])
             print("  ERROR:", exc)
-        time.sleep(0.2)
-    REPORT.write_text("\n".join(report)+"\n", encoding="utf-8")
-    print(f"Downloaded {ok}/{len(rows)} assets.")
+            if isinstance(exc, urllib.error.HTTPError) and exc.code == 429:
+                print("Rate limited; stopping. Respect Retry-After:", exc.headers.get("Retry-After", "not supplied"))
+                print("Re-run later; verified cached references will be preserved.")
+                report.extend([r["id"], "DEFERRED", "", "", "Rate limited earlier in run"] for r in rows[i:])
+                break
+        time.sleep(args.delay)
+    new_report = not REPORT.exists() or REPORT.stat().st_size == 0
+    with REPORT.open("a", encoding="utf-8", newline="") as stream:
+        writer = csv.writer(stream)
+        if new_report:
+            writer.writerow(["id", "status", "license", "file", "error"])
+        writer.writerows(report)
+    print(f"Available {ok}/{len(rows)} assets.")
+    return 0 if ok == len(rows) else 1
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
