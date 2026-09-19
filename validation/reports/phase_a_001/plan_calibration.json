@@ -1,0 +1,38 @@
+{
+  "iteration": "phase_a_001",
+  "status": "provisional_manual_calibration",
+  "preview_pixels_per_metre": 19.16473317865429,
+  "checks": {
+    "transept_clear_width": {
+      "plan_derived_m": 39.08220338983051,
+      "role": "independent_scale_crosscheck",
+      "documented_m": 39.0,
+      "residual_m": 0.08220338983051079,
+      "residual_percent": 0.21077792264232453
+    },
+    "crossing_pier_axis_span": {
+      "plan_derived_m": 10.748910411622276,
+      "role": "Pier-axis distance; not directly equivalent to the approximate 10 m clear crossing dimension."
+    },
+    "nave_outer_width": {
+      "plan_derived_m": 24.002421307506054,
+      "role": "exterior_envelope_without_buttresses"
+    },
+    "east_outer_limit": {
+      "plan_derived_m": 20.923849878934625,
+      "role": "exterior_offset_from_crossing"
+    },
+    "west_outer_limit": {
+      "plan_derived_m": 46.02203389830509,
+      "role": "exterior_offset_without_projecting_buttresses"
+    },
+    "inner_longitudinal_span_candidate": {
+      "plan_derived_m": 57.44927360774819,
+      "role": "Ambiguous west-hall boundary; discrepancy must remain visible, not used to rescale.",
+      "documented_m": 56.0,
+      "residual_m": 1.4492736077481894,
+      "residual_percent": 2.5879885852646334
+    }
+  },
+  "warning": "Image-derived historical dimensions are not surveyed present-day measurements. Residuals include manual picking and definition differences."
+}

@@ -1,1 +1,30 @@
-assumptions: {}
+assumptions:
+  nave_west_x: {value: -37.7, unit: m, reason: "P01 pier boundary v~1386 transformed from calibrated crossing origin; provisional westwork overlap.", confidence: medium, evidence_ids: [P01], iteration: phase_a_001}
+  nave_east_x: {value: -5.6, unit: m, reason: "P01 crossing boundary v~770 after hall-width calibration.", confidence: medium, evidence_ids: [P01], iteration: phase_a_001}
+  nave_half_width: {value: 12.0, unit: m, reason: "P01 outer wall span about 460 preview pixels; includes walls, excludes buttresses.", confidence: medium, evidence_ids: [P01, M04, M07], iteration: phase_a_001}
+  nominal_hall_wall_thickness: {value: 1.225, unit: m, reason: "Derived check only: (24.0 m exterior envelope minus documented 21.55 m clear hall)/2. No interior or uniform physical wall thickness is modeled.", confidence: low, evidence_ids: [P01, official_elisabethkirche], iteration: phase_a_001}
+  conch_half_width: {value: 6.0, unit: m, reason: "Rounded P01 outer arm half-width; shared by three arms as a provisional symmetric model.", confidence: medium, evidence_ids: [P01, M01, M19], iteration: phase_a_001}
+  conch_shoulder: {value: 14.8, unit: m, reason: "P01 polygon spring at v~380, about 14.8 m east of crossing; rotational symmetry provisionally applied to north/south.", confidence: medium, evidence_ids: [P01, M01], iteration: phase_a_001}
+  conch_facets: {value: 5, unit: count, reason: "Half-decagon terminal plan; polygonal surfaces visible in modern photographs.", confidence: high, evidence_ids: [P01, M02, M19, dehio], iteration: phase_a_001}
+  wall_eave_z: {value: 22.5, unit: m, reason: "Coarse exterior cornice height slightly above 20.20 m vault; P02/P08 and modern proportions, not an exterior measurement.", confidence: low, evidence_ids: [P02, P08, M05, official_elisabethkirche], iteration: phase_a_001}
+  main_ridge_z: {value: 32.5, unit: m, reason: "Approximate 10 m roof rise from P08 proportions, crosschecked qualitatively with M01/M05.", confidence: low, evidence_ids: [P08, M01, M05], iteration: phase_a_001}
+  side_roof_ridge_z: {value: 27.0, unit: m, reason: "Lower transverse aisle roofs evident in M01/M05 and P02; coarse provisional rise.", confidence: low, evidence_ids: [M01, M05, P02], iteration: phase_a_001}
+  side_roof_bays: {value: 5, unit: count, reason: "Five exposed aisle roof units between westwork and choir in P02 and M01; western structural bay is absorbed by westwork in this envelope.", confidence: medium, evidence_ids: [P02, M01], iteration: phase_a_001}
+  roof_overhang: {value: 0.25, unit: m, reason: "Provisional cornice projection for envelope roofs; no detailed cornice yet.", confidence: low, evidence_ids: [M05, M19], iteration: phase_a_001}
+  tower_center_x: {value: -40.75, unit: m, reason: "P01 approximate west tower plan placement, symmetrized; extends to x=-46 m.", confidence: medium, evidence_ids: [P01, M10, M11], iteration: phase_a_001}
+  tower_center_y: {value: 8.2, unit: m, reason: "Half tower centre separation inferred from P01 and west views; not surveyed.", confidence: medium, evidence_ids: [P01, M10, M11], iteration: phase_a_001}
+  tower_width: {value: 8.2, unit: m, reason: "Provisional core width excluding buttresses; asymmetric historical cut conventions simplified.", confidence: low, evidence_ids: [P01, M10], iteration: phase_a_001}
+  tower_depth: {value: 10.5, unit: m, reason: "P01 western envelope depth, rounded and excluding buttresses.", confidence: low, evidence_ids: [P01, M09], iteration: phase_a_001}
+  tower_shaft_z: {value: 45.0, unit: m, reason: "Approximate start of upper gabled stage, based on modern west/tower photographs relative to 80 m anchor.", confidence: low, evidence_ids: [M10, M11, M09], iteration: phase_a_001}
+  tower_spire_base_z: {value: 55.0, unit: m, reason: "Provisional 55 m spring of stone spire; exact gable/helm relation unresolved.", confidence: low, evidence_ids: [M02, M10, M11], iteration: phase_a_001}
+  tower_spire_radius: {value: 3.5, unit: m, reason: "Octagonal stone helm radius inferred from shaft width and photographs; terminal height uses documented 80 m.", confidence: low, evidence_ids: [M02, M10], iteration: phase_a_001}
+  west_hall_roof_z: {value: 29.0, unit: m, reason: "Provisional roof between towers; stepped facade gable intentionally deferred.", confidence: low, evidence_ids: [M10, M11], iteration: phase_a_001}
+  crossing_turret_radius: {value: 1.6, unit: m, reason: "Modern octagonal ridge turret width inferred from M02/M05, not copied from nineteenth-century spire.", confidence: low, evidence_ids: [M02, M05], iteration: phase_a_001}
+  crossing_turret_shoulder_z: {value: 38.0, unit: m, reason: "Provisional modern turret spire spring; lantern apertures deferred.", confidence: low, evidence_ids: [M02, M05], iteration: phase_a_001}
+  crossing_turret_tip_z: {value: 50.0, unit: m, reason: "Modern ridge turret estimated from oblique views; weather vane omitted, not measured.", confidence: low, evidence_ids: [M02, M05], iteration: phase_a_001}
+  sacristy_center_x: {value: 12.8, unit: m, reason: "P01 northeast annex centre after plan transform, rounded.", confidence: medium, evidence_ids: [P01, M16], iteration: phase_a_001}
+  sacristy_center_y: {value: 11.5, unit: m, reason: "P01 northeast annex centre after plan transform, rounded.", confidence: medium, evidence_ids: [P01, M15, M16], iteration: phase_a_001}
+  sacristy_size_x: {value: 7.5, unit: m, reason: "P01 annex east-west dimension, excluding minor connector/stair details.", confidence: medium, evidence_ids: [P01, M16], iteration: phase_a_001}
+  sacristy_size_y: {value: 10.5, unit: m, reason: "P01 annex north-south dimension, excluding buttresses; connector to north choir simplified at the same eave height.", confidence: medium, evidence_ids: [P01, M15], iteration: phase_a_001}
+  sacristy_eave_z: {value: 14.5, unit: m, reason: "Approximate lower two-storey annex height from M15/M16 relative to choir.", confidence: low, evidence_ids: [M15, M16], iteration: phase_a_001}
+  sacristy_roof_z: {value: 20.0, unit: m, reason: "Approximate pyramid roof apex from M16; ridge shape not yet calibrated.", confidence: low, evidence_ids: [M16, M01], iteration: phase_a_001}

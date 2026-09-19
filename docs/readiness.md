@@ -1,5 +1,10 @@
 # Startprüfung — 2026-09-19
 
+Nachtrag Phase A 001: Der frühere Downloadengpass ist behoben; alle 32 Referenzen
+sind lokal geladen und auf Hash/Lizenz/Lesbarkeit geprüft. Das erste Grobmodell
+ist umgesetzt. Der folgende Text hält den damaligen Prüfstand fest; aktueller Stand
+und verbleibende Grenzen stehen in [iterations/phase_a_001.md](iterations/phase_a_001.md).
+
 ## Auftrag und Stand
 
 Geprüft: Projektvorgaben, alle sieben offenen GitHub-Issues #2–#8, Skripte,

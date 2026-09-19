@@ -1,0 +1,35 @@
+iteration: phase_a_001
+evidence_id: P01
+status: provisional_manual_digitization
+original_size_px: [3574, 5114]
+# Coordinates below refer to the inspected, uniformly resized plan preview.
+# They are image observations, not surveyed building coordinates.
+digitization_size_px: [1311, 1877]
+origin_uv: [609, 663]
+east_image_direction: [0, -1]
+north_image_direction: [-1, 0]
+scale_anchor: hall_total_width
+scale_points_uv: [[404, 1100], [817, 1100]]
+scale_note: "Clear wall faces between piers; 413 preview pixels assigned 21.55 m. No historical foot conversion assumed."
+checks:
+  transept_clear_width:
+    points_uv: [[239, 665], [988, 665]]
+    documented_dimension: transept_width
+    role: independent_scale_crosscheck
+  crossing_pier_axis_span:
+    points_uv: [[506, 663], [712, 663]]
+    role: "Pier-axis distance; not directly equivalent to the approximate 10 m clear crossing dimension."
+  nave_outer_width:
+    points_uv: [[377, 1100], [837, 1100]]
+    role: exterior_envelope_without_buttresses
+  east_outer_limit:
+    points_uv: [[609, 663], [609, 262]]
+    role: exterior_offset_from_crossing
+  west_outer_limit:
+    points_uv: [[609, 663], [609, 1545]]
+    role: exterior_offset_without_projecting_buttresses
+  inner_longitudinal_span_candidate:
+    points_uv: [[609, 285], [609, 1386]]
+    documented_dimension: inner_length_without_west_hall
+    role: "Ambiguous west-hall boundary; discrepancy must remain visible, not used to rescale."
+uncertainty_note: "Manual picks roughly +/-3 preview pixels, plus unknown engraving distortion and historical/current differences. No survey accuracy claimed."

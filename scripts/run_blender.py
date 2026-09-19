@@ -25,18 +25,27 @@ def find_blender(explicit=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("task", choices=("smoke", "scene", "render"))
+    parser.add_argument("task", choices=("smoke", "scene", "render", "build", "inspect"))
     parser.add_argument("--blender")
+    parser.add_argument("--output", type=Path, help="New .blend for build (never overwritten)")
+    parser.add_argument("--scene", type=Path, help="Existing .blend to inspect/render")
     args = parser.parse_args()
     subprocess.run([os.sys.executable, str(ROOT / "scripts/validate_dataset.py")], check=True)
     env = os.environ.copy()
     env["EKIRCHE_DIMENSIONS_JSON"] = json.dumps(yaml.safe_load((ROOT / "data/dimensions.yaml").read_text(encoding="utf-8")))
+    if args.task == "build":
+        subprocess.run([os.sys.executable, str(ROOT / "scripts/validate_dataset.py"), "--assets"], check=True)
+        payload = {"dimensions": json.loads(env["EKIRCHE_DIMENSIONS_JSON"])}
+        for name, path in (("assumptions", "data/assumptions.yaml"), ("inspection", "validation/inspection_views.yaml")):
+            payload[name] = yaml.safe_load((ROOT / path).read_text(encoding="utf-8"))
+        env["EKIRCHE_MODEL_JSON"] = json.dumps(payload)
+        env["EKIRCHE_OUTPUT"] = str((args.output or ROOT / "blender/scene/phase_a_001.blend").resolve())
     cmd = [find_blender(args.blender), "--background"]
-    scene = ROOT / "blender/scene/elisabethkirche.blend"
-    if args.task == "render":
+    scene = args.scene or ROOT / ("blender/scene/phase_a_001.blend" if args.task == "inspect" else "blender/scene/elisabethkirche.blend")
+    if args.task in ("render", "inspect"):
         if not scene.exists():
             raise SystemExit("Scene missing; build and calibrate the model first.")
-        cmd += [str(scene)]
+        cmd += [str(scene.resolve())]
     else:
         cmd += ["--factory-startup"]
     cmd += ["--python-exit-code", "1"]
@@ -45,7 +54,7 @@ def main():
             raise SystemExit("Scene already exists; preserve it before explicitly rebuilding.")
         scripts = ["00_scene_setup.py", "10_massing.py"]
     else:
-        scripts = ["smoke_test.py" if args.task == "smoke" else "90_validation.py"]
+        scripts = [{"smoke": "smoke_test.py", "render": "90_validation.py", "build": "20_exterior.py", "inspect": "80_inspection.py"}[args.task]]
     for script in scripts:
         cmd += ["--python", str(ROOT / "scripts/blender" / script)]
     return subprocess.run(cmd, cwd=ROOT, env=env).returncode

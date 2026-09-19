@@ -1,0 +1,578 @@
+[
+  {
+    "id": "M01",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Luftbild%20NNO.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Stefan Weisbrod (User:StefanW-co)",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:12:23.630017+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Elisabethkirche_Luftbild_NNO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M01_Elisabethkirche Luftbild NNO.jpg",
+    "download_sha256": "ba9d3fe7a2916c2752c8683f4b0c39ff9f8d02ea584bd305fad55db76dca7196",
+    "local_size_px": [
+      600,
+      600
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M02",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20von%20SO.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:12:27.253160+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Elisabethkirche_Marburg_von_SO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M02_Elisabethkirche Marburg von SO.jpg",
+    "download_sha256": "a8dd29c4c02f708ca2873b9bdbfb173b21cbe9ae7660637055320a10d923bf57",
+    "local_size_px": [
+      3696,
+      3053
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M03",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20MR%20von%20SO.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:17:27.548525+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Elisabethkirche_MR_von_SO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M03_Elisabethkirche MR von SO.jpg",
+    "download_sha256": "bce0020ba16c6af7e36f2917d7d446a7f32517855ba81a71f81ed67fd4962cc3",
+    "local_size_px": [
+      3384,
+      2524
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M04",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20S%C3%BCdseite.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:17:36.333740+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Elisabethkirche_Marburg_S%C3%BCdseite.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M04_Elisabethkirche Marburg Südseite.jpg",
+    "download_sha256": "c0b817759ea07b13493181506ab0bee08a66c62d40d90e8af25e727b2d54e57f",
+    "local_size_px": [
+      2600,
+      3900
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M05",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20(Marburg)%20S%C3%BCdseite.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:17:40.443739+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Elisabethkirche_%28Marburg%29_S%C3%BCdseite.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M05_Elisabethkirche (Marburg) Südseite.jpg",
+    "download_sha256": "04ab3d0a47e07c3afaa78a946a1d513262c08a2a3ae7878aea2376314dcd119a",
+    "local_size_px": [
+      2464,
+      3696
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M06",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20(Marburg)%20Nordseite.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:12:31.689051+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Elisabethkirche_%28Marburg%29_Nordseite.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M06_Elisabethkirche (Marburg) Nordseite.jpg",
+    "download_sha256": "1825035996fe65701e0de8efe849f98c2828ea5b565bf6f3aa3866fe648c0c17",
+    "local_size_px": [
+      2464,
+      3696
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M07",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20Nordseite.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:17:44.903736+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Elisabethkirche_Marburg_Nordseite.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M07_Elisabethkirche Marburg Nordseite.jpg",
+    "download_sha256": "c9bfb4075eb76d5509fc4ddf7029fb4b237706f18a5cac68f5d0c2811f2ac055",
+    "local_size_px": [
+      2459,
+      3696
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M08",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20von%20SW.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Heinrich Stürzl",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:20:39.087418+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Elisabethkirche_Marburg_von_SW.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M08_Elisabethkirche Marburg von SW.jpg",
+    "download_sha256": "5f966db8aaab7374e31c5152394802c1f99c844fe7fffce74f370f7c3ada683d",
+    "local_size_px": [
+      3432,
+      3293
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M09",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20(Marburg)%20T%C3%BCrme%20aus%20SW.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:17:52.699899+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Elisabethkirche_%28Marburg%29_T%C3%BCrme_aus_SW.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M09_Elisabethkirche (Marburg) Türme aus SW.jpg",
+    "download_sha256": "7800ff68631e8ac5eca0b71f4ef760864aed7c799cc0c14d531b57e16fcc6ba4",
+    "local_size_px": [
+      2448,
+      3696
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M10",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20(03).jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:17:57.127177+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Elisabethkirche_Marburg_%2803%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M10_Elisabethkirche Marburg (03).jpg",
+    "download_sha256": "d20264f687271ae95d23c34ef5cd1493643120b7d4c0de8b7a49063aae83b03d",
+    "local_size_px": [
+      3448,
+      5172
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M11",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20(04).jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:18:01.512529+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Elisabethkirche_Marburg_%2804%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M11_Elisabethkirche Marburg (04).jpg",
+    "download_sha256": "0aefe87caf87cebe4a4d81ca3094ca428bbd58846acc82f470b1f977a916370c",
+    "local_size_px": [
+      3573,
+      4764
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M12",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Westportal%20von%20W%2003.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Heinrich Stürzl",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:20:43.479836+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Marburg_Elisabethkirche_Westportal_von_W_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M12_Marburg Elisabethkirche Westportal von W 03.jpg",
+    "download_sha256": "d0f46951143f0f34e9745e470899d9dc08dfd0b7465472bec8a3ef14c77b5eee",
+    "local_size_px": [
+      2977,
+      4519
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M13",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Westportal%20von%20W%2004.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Heinrich Stürzl",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:20:47.974693+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Marburg_Elisabethkirche_Westportal_von_W_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M13_Marburg Elisabethkirche Westportal von W 04.jpg",
+    "download_sha256": "bfa7b7c75e15a370c90f8eddda737f14774a7baf52e54a74b4820508d43dda5a",
+    "local_size_px": [
+      3153,
+      4639
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M14",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20Fassadendetail%20Uhr.jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Hydro",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:20:58.698212+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Elisabethkirche_Marburg_Fassadendetail_Uhr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M14_Elisabethkirche Marburg Fassadendetail Uhr.jpg",
+    "download_sha256": "b298a6a98e9d267b1133693e9abbdc0596c96c5f449ec9863e4cd7f8ca01d87d",
+    "local_size_px": [
+      3588,
+      5064
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M15",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Sakristei%20Au%C3%9Fenansicht%20von%20N.JPG",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Heinrich Stürzl",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:18:09.790193+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Marburg_Elisabethkirche_Sakristei_Au%C3%9Fenansicht_von_N.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M15_Marburg Elisabethkirche Sakristei Außenansicht von N.JPG",
+    "download_sha256": "32cd27a2b80dbd3757bd17b74b397e0f35981df7d1dc23e85b5e7cbad62ca0c8",
+    "local_size_px": [
+      3456,
+      5184
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M16",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Sakristei%20Au%C3%9Fenansicht%20von%20NO.JPG",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Heinrich Stürzl",
+    "credit": "Own work",
+    "retrieved_at": "2026-09-19T08:18:14.080918+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Marburg_Elisabethkirche_Sakristei_Au%C3%9Fenansicht_von_NO.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\images\\modern\\M16_Marburg Elisabethkirche Sakristei Außenansicht von NO.JPG",
+    "download_sha256": "969b73f83ff1adf4c1a0fd3f48e467f3c2d252cd467246ad7e03649dab90e469",
+    "local_size_px": [
+      3372,
+      5058
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M17",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Sakristeidach%20Au%C3%9Fenansicht%20von%20NO.JPG",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Heinrich Stürzl",
+    "credit": "Own work (→ weitere 2,802 Bilder von mir)",
+    "retrieved_at": "2026-09-19T08:21:09.271444+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Marburg_Elisabethkirche_Sakristeidach_Au%C3%9Fenansicht_von_NO.JPG/3840px-Marburg_Elisabethkirche_Sakristeidach_Au%C3%9Fenansicht_von_NO.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\images\\modern\\M17_Marburg Elisabethkirche Sakristeidach Außenansicht von NO.JPG",
+    "download_sha256": "b3685012784da58a04e41360073c58f3b061d2af0a9b5efb6cf13965bd23d4fe",
+    "local_size_px": [
+      3840,
+      2633
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M18",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20S%C3%BCdchor%20Dach%20von%20SO%20(1).jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Heinrich Stürzl",
+    "credit": "Own work (→ weitere 2,802 Bilder von mir)",
+    "retrieved_at": "2026-09-19T08:21:16.911251+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Marburg_Elisabethkirche_S%C3%BCdchor_Dach_von_SO_%281%29.jpg/3840px-Marburg_Elisabethkirche_S%C3%BCdchor_Dach_von_SO_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\images\\modern\\M18_Marburg Elisabethkirche Südchor Dach von SO (1).jpg",
+    "download_sha256": "a0b168d70c06f0101172d50fd0eaaccc6c5522ca33bdd4fccf8610157316a6fd",
+    "local_size_px": [
+      3840,
+      2482
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "M19",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20S%C3%BCdchor%20von%20SO%20(1).jpg",
+    "status": "verified_download",
+    "license_short_name": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Heinrich Stürzl",
+    "credit": "Own work (→ weitere 2,802 Bilder von mir)",
+    "retrieved_at": "2026-09-19T08:18:18.324809+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Marburg_Elisabethkirche_S%C3%BCdchor_von_SO_%281%29.jpg/3840px-Marburg_Elisabethkirche_S%C3%BCdchor_von_SO_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\images\\modern\\M19_Marburg Elisabethkirche Südchor von SO (1).jpg",
+    "download_sha256": "a4b686fa442b3fd7b717d0f944d0589cd64d02b0e4d2b6539b61d4e87f56d3fe",
+    "local_size_px": [
+      3840,
+      4429
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "H01",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20-%20Ostseite%20fm810181.jpg",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Ludwig Bickell",
+    "credit": "http://id.bildindex.de/thing/0001242349",
+    "retrieved_at": "2026-09-19T08:18:22.749519+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Elisabethkirche_Marburg_-_Ostseite_fm810181.jpg/3840px-Elisabethkirche_Marburg_-_Ostseite_fm810181.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\images\\historic\\H01_Elisabethkirche Marburg - Ostseite fm810181.jpg",
+    "download_sha256": "00f75565ffd042dc5fb30b8cebeb1c1c332efac966178fbbf185379312fe2f76",
+    "local_size_px": [
+      3840,
+      2857
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "H02",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20-%20Nordseite%20fm810175.jpg",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Ludwig Bickell",
+    "credit": "http://id.bildindex.de/thing/0001242348",
+    "retrieved_at": "2026-09-19T08:18:39.840539+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Elisabethkirche_Marburg_-_Nordseite_fm810175.jpg/3840px-Elisabethkirche_Marburg_-_Nordseite_fm810175.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\images\\historic\\H02_Elisabethkirche Marburg - Nordseite fm810175.jpg",
+    "download_sha256": "d7e95d374d14252d2cb3e6e1c52ffa2c7168e64965492eac6805a92e5da7f740",
+    "local_size_px": [
+      3840,
+      2887
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "H03",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20-%20Nordseite%20fm810176.jpg",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Ludwig Bickell",
+    "credit": "http://id.bildindex.de/thing/0001242348",
+    "retrieved_at": "2026-09-19T08:18:45.821330+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Elisabethkirche_Marburg_-_Nordseite_fm810176.jpg/3840px-Elisabethkirche_Marburg_-_Nordseite_fm810176.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\images\\historic\\H03_Elisabethkirche Marburg - Nordseite fm810176.jpg",
+    "download_sha256": "8aa9cfd76c716a1ff6e4c8b086d193ee49c99b9ad8ec6ec9653ad8e71d137051",
+    "local_size_px": [
+      3840,
+      2835
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "H04",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20-%20S%C3%BCdseite%20fm810173.jpg",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Ludwig Bickell",
+    "credit": "http://id.bildindex.de/thing/0001242350",
+    "retrieved_at": "2026-09-19T08:18:53.474591+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Elisabethkirche_Marburg_-_S%C3%BCdseite_fm810173.jpg/3840px-Elisabethkirche_Marburg_-_S%C3%BCdseite_fm810173.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\images\\historic\\H04_Elisabethkirche Marburg - Südseite fm810173.jpg",
+    "download_sha256": "300e5cdcff5b337b9deb13e6d94f513305c85b1db6d317cc4055f3c6b3a826be",
+    "local_size_px": [
+      3840,
+      2936
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "H05",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20fm810168.jpg",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Ludwig Bickell",
+    "credit": "http://id.bildindex.de/thing/0001242356",
+    "retrieved_at": "2026-09-19T08:21:27.591101+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Elisabethkirche_Marburg_fm810168.jpg/3840px-Elisabethkirche_Marburg_fm810168.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\images\\historic\\H05_Elisabethkirche Marburg fm810168.jpg",
+    "download_sha256": "0fc1de1f874e06571588afd11d0e2ccf5ccdcd9af4334e7f764579feb87d2439",
+    "local_size_px": [
+      3840,
+      4989
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "P01",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2016.png",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Moller, Georg (1784-1852)",
+    "credit": "https://digi.ub.uni-heidelberg.de/diglit/moller1825bd2_1/0001",
+    "retrieved_at": "2026-09-19T08:19:02.815678+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_16.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\plans\\downloaded\\P01_Moller Denkmähler Marburg Elisabethkirche 16.png",
+    "download_sha256": "12794c20a1222795da47081c7922ca88589ecb5c3ab9b3e1648575df4db4a189",
+    "local_size_px": [
+      3574,
+      5114
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "P02",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2018.png",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Moller, Georg (1784-1852)",
+    "credit": "https://digi.ub.uni-heidelberg.de/diglit/moller1825bd2_1/0001",
+    "retrieved_at": "2026-09-19T08:19:25.707335+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_18.png/3840px-Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_18.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\plans\\downloaded\\P02_Moller Denkmähler Marburg Elisabethkirche 18.png",
+    "download_sha256": "18f7a4935e92fa846edb56070f497f425d9abc61753e9a7e646fc578c190cfce",
+    "local_size_px": [
+      3840,
+      2625
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "P03",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2020.png",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Moller, Georg (1784-1852)",
+    "credit": "https://digi.ub.uni-heidelberg.de/diglit/moller1825bd2_1/0001",
+    "retrieved_at": "2026-09-19T08:21:32.735728+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_20.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\plans\\downloaded\\P03_Moller Denkmähler Marburg Elisabethkirche 20.png",
+    "download_sha256": "f2d6b50cdb23da117de9b0c0bad99b81ca971b7b3e32cfba24f67f98be59efb4",
+    "local_size_px": [
+      3350,
+      4937
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "P04",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2021.png",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Moller, Georg (1784-1852)",
+    "credit": "https://digi.ub.uni-heidelberg.de/diglit/moller1825bd2_1/0001",
+    "retrieved_at": "2026-09-19T08:21:40.249741+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_21.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\plans\\downloaded\\P04_Moller Denkmähler Marburg Elisabethkirche 21.png",
+    "download_sha256": "60d05048dc36744a59fdeb2c812537a749f7696ca2edd6c8b325ab5ccfe2dd30",
+    "local_size_px": [
+      3329,
+      4927
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "P05",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2022.png",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Moller, Georg (1784-1852)",
+    "credit": "https://digi.ub.uni-heidelberg.de/diglit/moller1825bd2_1/0001",
+    "retrieved_at": "2026-09-19T08:22:01.518890+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_22.png/3840px-Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_22.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\plans\\downloaded\\P05_Moller Denkmähler Marburg Elisabethkirche 22.png",
+    "download_sha256": "29271831f6135f215fb9581f5aa3c7630a231ac445e4d9d982e9d5bb6eb44c4a",
+    "local_size_px": [
+      3840,
+      2692
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "P06",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2023.png",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Moller, Georg (1784-1852)",
+    "credit": "https://digi.ub.uni-heidelberg.de/diglit/moller1825bd2_1/0001",
+    "retrieved_at": "2026-09-19T08:19:55.844663+00:00",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_23.png/3840px-Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_23.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "downloaded_to": "references\\plans\\downloaded\\P06_Moller Denkmähler Marburg Elisabethkirche 23.png",
+    "download_sha256": "84c5f9e95c6f966913f8e2cfbfd4d5ac397547f20bc28b9f94277ed30d7ad3a7",
+    "local_size_px": [
+      3840,
+      2620
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "P07",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2024.png",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Moller, Georg (1784-1852)",
+    "credit": "https://digi.ub.uni-heidelberg.de/diglit/moller1825bd2_1/0001",
+    "retrieved_at": "2026-09-19T08:20:00.826744+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_24.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\plans\\downloaded\\P07_Moller Denkmähler Marburg Elisabethkirche 24.png",
+    "download_sha256": "f087d9d65c79e0e1caf12ab2b935dfd0394ce64ec97c5830a8e09eccfbfb354e",
+    "local_size_px": [
+      3275,
+      5093
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  },
+  {
+    "id": "P08",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2025.png",
+    "status": "verified_download",
+    "license_short_name": "Public domain",
+    "license_url": "",
+    "artist": "Moller, Georg (1784-1852)",
+    "credit": "https://digi.ub.uni-heidelberg.de/diglit/moller1825bd2_1/0001",
+    "retrieved_at": "2026-09-19T08:20:11.572653+00:00",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Moller_Denkm%C3%A4hler_Marburg_Elisabethkirche_25.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "downloaded_to": "references\\plans\\downloaded\\P08_Moller Denkmähler Marburg Elisabethkirche 25.png",
+    "download_sha256": "916d6432d1cebc3be8f0af19d1c594ee01837bebf8fe7c62386783b8ad48235b",
+    "local_size_px": [
+      3516,
+      4942
+    ],
+    "visual_review": "see docs/iterations/phase_a_001.md; download verification is not geometric validation"
+  }
+]

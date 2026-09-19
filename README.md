@@ -74,3 +74,24 @@ Nach Erstellung und dokumentierter Kalibrierung der `VAL_*`-Kameras:
 `python scripts/run_blender.py render`.
 
 Prüfstand und offene Startbedingungen: [docs/readiness.md](docs/readiness.md).
+
+## Erster Modellstand: Phase A 001
+
+`blender/scene/phase_a_001.blend` enthält das prozedurale Grobmodell der Außenhülle:
+Langhaus, Dreikonchenchor, Westtürme, Hauptdächer und Sakristei. Noch keine Fenster,
+Strebepfeiler oder Schmuckdetails; die Fotokalibrierung steht aus.
+
+```bash
+python scripts/run_blender.py build --output tmp/rebuilt_phase_a_001.blend
+python scripts/run_blender.py inspect --scene tmp/rebuilt_phase_a_001.blend
+python scripts/report_iteration.py
+```
+
+Voraussetzung: Priority-1-Referenzen lokal geladen. Jeder Build verlangt einen neuen
+Ausgabepfad und prüft Maßanker, geschlossene Einzelmeshes und Kamera-Bildausschnitte.
+Kontrollbilder und Planoverlay liegen unter `validation/renders/phase_a_001/`.
+Die JSON-Berichte unter `validation/reports/phase_a_001/` werden neu erzeugt.
+Die synthetischen `INSPECT_*`-Ansichten sind keine gelösten Fotokameras.
+
+Ergebnisse, Unsicherheiten und nächste Arbeitsschritte:
+[Iterationsbericht](docs/iterations/phase_a_001.md).

@@ -1,0 +1,13 @@
+iteration: phase_a_001
+status: synthetic_inspection_only_not_photographic_calibration
+reason: "Fixed diagnostic views expose envelope and roof junctions. None claims agreement with a photograph; VAL_* remains reserved for solved reference cameras."
+resolution: [1200, 1000]
+views:
+  INSPECT_SE: {position: [85, -120, 78], target: [-12, 0, 37], ortho_scale: 125}
+  INSPECT_NE: {position: [85, 120, 78], target: [-12, 0, 37], ortho_scale: 125}
+  INSPECT_W: {position: [-155, 0, 42], target: [-15, 0, 40], ortho_scale: 110}
+  INSPECT_S: {position: [-12, -155, 40], target: [-12, 0, 40], ortho_scale: 110}
+  INSPECT_N: {position: [-12, 155, 40], target: [-12, 0, 40], ortho_scale: 110}
+  INSPECT_PLAN: {position: [-12, 0, 155], target: [-12, 0, 0], ortho_scale: 90}
+change_log:
+  - "phase_a_001 initial QA: enlarged SE/NE from 105 to 125 and raised target Z from 31 to 37 because tower tips were clipped. W/N/S enlarged to 110 for margin. Synthetic framing only; no photo fit or geometry discrepancy hidden."
