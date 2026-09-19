@@ -1,0 +1,13 @@
+policy:
+  - "Only free/open or public-domain assets may be downloaded into this project."
+  - "The downloader queries Wikimedia Commons metadata at download time."
+  - "Unexpected or missing licence metadata causes a skip/error."
+  - "Keep commons_download_metadata.jsonl with redistributed reference sets."
+
+accepted_families:
+  - CC0
+  - CC BY
+  - CC BY-SA
+  - Public domain
+  - PDM
+  - GFDL

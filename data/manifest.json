@@ -1,0 +1,322 @@
+[
+  {
+    "id": "M01",
+    "group": "modern",
+    "title": "Elisabethkirche Luftbild NNO.jpg",
+    "view": "NNE aerial",
+    "role": "roof_mass_and_triconch",
+    "priority": 1,
+    "metric_use": "geometry_reference_only",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Luftbild%20NNO.jpg"
+  },
+  {
+    "id": "M02",
+    "group": "modern",
+    "title": "Elisabethkirche Marburg von SO.jpg",
+    "view": "SE",
+    "role": "primary_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20von%20SO.jpg"
+  },
+  {
+    "id": "M03",
+    "group": "modern",
+    "title": "Elisabethkirche MR von SO.jpg",
+    "view": "SE",
+    "role": "primary_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20MR%20von%20SO.jpg"
+  },
+  {
+    "id": "M04",
+    "group": "modern",
+    "title": "Elisabethkirche Marburg Südseite.jpg",
+    "view": "S",
+    "role": "primary_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20S%C3%BCdseite.jpg"
+  },
+  {
+    "id": "M05",
+    "group": "modern",
+    "title": "Elisabethkirche (Marburg) Südseite.jpg",
+    "view": "S",
+    "role": "primary_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20(Marburg)%20S%C3%BCdseite.jpg"
+  },
+  {
+    "id": "M06",
+    "group": "modern",
+    "title": "Elisabethkirche (Marburg) Nordseite.jpg",
+    "view": "N",
+    "role": "primary_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20(Marburg)%20Nordseite.jpg"
+  },
+  {
+    "id": "M07",
+    "group": "modern",
+    "title": "Elisabethkirche Marburg Nordseite.jpg",
+    "view": "N",
+    "role": "primary_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20Nordseite.jpg"
+  },
+  {
+    "id": "M08",
+    "group": "modern",
+    "title": "Elisabethkirche Marburg von SW.jpg",
+    "view": "SW",
+    "role": "geometry_reference",
+    "priority": 2,
+    "metric_use": "do_not_camera_solve",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20von%20SW.jpg"
+  },
+  {
+    "id": "M09",
+    "group": "modern",
+    "title": "Elisabethkirche (Marburg) Türme aus SW.jpg",
+    "view": "SW towers",
+    "role": "tower_geometry",
+    "priority": 1,
+    "metric_use": "geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20(Marburg)%20T%C3%BCrme%20aus%20SW.jpg"
+  },
+  {
+    "id": "M10",
+    "group": "modern",
+    "title": "Elisabethkirche Marburg (03).jpg",
+    "view": "W",
+    "role": "primary_west_facade",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20(03).jpg"
+  },
+  {
+    "id": "M11",
+    "group": "modern",
+    "title": "Elisabethkirche Marburg (04).jpg",
+    "view": "W",
+    "role": "primary_west_facade",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20(04).jpg"
+  },
+  {
+    "id": "M12",
+    "group": "modern",
+    "title": "Marburg Elisabethkirche Westportal von W 03.jpg",
+    "view": "W portal",
+    "role": "west_detail",
+    "priority": 2,
+    "metric_use": "detail_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Westportal%20von%20W%2003.jpg"
+  },
+  {
+    "id": "M13",
+    "group": "modern",
+    "title": "Marburg Elisabethkirche Westportal von W 04.jpg",
+    "view": "W portal",
+    "role": "west_detail",
+    "priority": 2,
+    "metric_use": "detail_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Westportal%20von%20W%2004.jpg"
+  },
+  {
+    "id": "M14",
+    "group": "modern",
+    "title": "Elisabethkirche Marburg Fassadendetail Uhr.jpg",
+    "view": "W detail",
+    "role": "tower_facade_detail",
+    "priority": 3,
+    "metric_use": "detail_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20Fassadendetail%20Uhr.jpg"
+  },
+  {
+    "id": "M15",
+    "group": "modern",
+    "title": "Marburg Elisabethkirche Sakristei Außenansicht von N.JPG",
+    "view": "N sacristy",
+    "role": "sacristy_geometry",
+    "priority": 1,
+    "metric_use": "geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Sakristei%20Au%C3%9Fenansicht%20von%20N.JPG"
+  },
+  {
+    "id": "M16",
+    "group": "modern",
+    "title": "Marburg Elisabethkirche Sakristei Außenansicht von NO.JPG",
+    "view": "NE sacristy",
+    "role": "sacristy_geometry",
+    "priority": 1,
+    "metric_use": "geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Sakristei%20Au%C3%9Fenansicht%20von%20NO.JPG"
+  },
+  {
+    "id": "M17",
+    "group": "modern",
+    "title": "Marburg Elisabethkirche Sakristeidach Außenansicht von NO.JPG",
+    "view": "NE sacristy roof",
+    "role": "roof_detail",
+    "priority": 2,
+    "metric_use": "detail_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20Sakristeidach%20Au%C3%9Fenansicht%20von%20NO.JPG"
+  },
+  {
+    "id": "M18",
+    "group": "modern",
+    "title": "Marburg Elisabethkirche Südchor Dach von SO (1).jpg",
+    "view": "SE south choir roof",
+    "role": "roof_detail",
+    "priority": 2,
+    "metric_use": "detail_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20S%C3%BCdchor%20Dach%20von%20SO%20(1).jpg"
+  },
+  {
+    "id": "M19",
+    "group": "modern",
+    "title": "Marburg Elisabethkirche Südchor von SO (1).jpg",
+    "view": "SE south choir",
+    "role": "apse_geometry",
+    "priority": 1,
+    "metric_use": "geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20S%C3%BCdchor%20von%20SO%20(1).jpg"
+  },
+  {
+    "id": "H01",
+    "group": "historic_pd",
+    "title": "Elisabethkirche Marburg - Ostseite fm810181.jpg",
+    "view": "E historical",
+    "role": "occlusion_reference",
+    "priority": 1,
+    "metric_use": "historical_geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20-%20Ostseite%20fm810181.jpg"
+  },
+  {
+    "id": "H02",
+    "group": "historic_pd",
+    "title": "Elisabethkirche Marburg - Nordseite fm810175.jpg",
+    "view": "N historical",
+    "role": "occlusion_reference",
+    "priority": 1,
+    "metric_use": "historical_geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20-%20Nordseite%20fm810175.jpg"
+  },
+  {
+    "id": "H03",
+    "group": "historic_pd",
+    "title": "Elisabethkirche Marburg - Nordseite fm810176.jpg",
+    "view": "NE historical",
+    "role": "occlusion_reference",
+    "priority": 1,
+    "metric_use": "historical_geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20-%20Nordseite%20fm810176.jpg"
+  },
+  {
+    "id": "H04",
+    "group": "historic_pd",
+    "title": "Elisabethkirche Marburg - Südseite fm810173.jpg",
+    "view": "S historical",
+    "role": "occlusion_reference",
+    "priority": 1,
+    "metric_use": "historical_geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20-%20S%C3%BCdseite%20fm810173.jpg"
+  },
+  {
+    "id": "H05",
+    "group": "historic_pd",
+    "title": "Elisabethkirche Marburg fm810168.jpg",
+    "view": "NW historical",
+    "role": "tower_proportion_reference",
+    "priority": 2,
+    "metric_use": "historical_geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20fm810168.jpg"
+  },
+  {
+    "id": "P01",
+    "group": "plans",
+    "title": "Moller Denkmähler Marburg Elisabethkirche 16.png",
+    "view": "floor plan 1825",
+    "role": "primary_plan",
+    "priority": 1,
+    "metric_use": "primary_orthographic_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2016.png"
+  },
+  {
+    "id": "P02",
+    "group": "plans",
+    "title": "Moller Denkmähler Marburg Elisabethkirche 18.png",
+    "view": "side elevation 1825",
+    "role": "primary_elevation",
+    "priority": 1,
+    "metric_use": "primary_orthographic_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2018.png"
+  },
+  {
+    "id": "P03",
+    "group": "plans",
+    "title": "Moller Denkmähler Marburg Elisabethkirche 20.png",
+    "view": "west door 1825",
+    "role": "west_detail_drawing",
+    "priority": 3,
+    "metric_use": "detail_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2020.png"
+  },
+  {
+    "id": "P04",
+    "group": "plans",
+    "title": "Moller Denkmähler Marburg Elisabethkirche 21.png",
+    "view": "exterior perspective 1825",
+    "role": "historical_exterior_drawing",
+    "priority": 3,
+    "metric_use": "historical_geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2021.png"
+  },
+  {
+    "id": "P05",
+    "group": "plans",
+    "title": "Moller Denkmähler Marburg Elisabethkirche 22.png",
+    "view": "NE view 1825",
+    "role": "historical_exterior_drawing",
+    "priority": 3,
+    "metric_use": "historical_geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2022.png"
+  },
+  {
+    "id": "P06",
+    "group": "plans",
+    "title": "Moller Denkmähler Marburg Elisabethkirche 23.png",
+    "view": "longitudinal section 1825",
+    "role": "primary_section",
+    "priority": 1,
+    "metric_use": "primary_orthographic_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2023.png"
+  },
+  {
+    "id": "P07",
+    "group": "plans",
+    "title": "Moller Denkmähler Marburg Elisabethkirche 24.png",
+    "view": "tower section 1825",
+    "role": "tower_section",
+    "priority": 1,
+    "metric_use": "primary_orthographic_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2024.png"
+  },
+  {
+    "id": "P08",
+    "group": "plans",
+    "title": "Moller Denkmähler Marburg Elisabethkirche 25.png",
+    "view": "cross section 1825",
+    "role": "primary_section",
+    "priority": 1,
+    "metric_use": "primary_orthographic_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2025.png"
+  }
+]

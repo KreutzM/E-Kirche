@@ -1,0 +1,14 @@
+units: metres
+handedness: right
+origin:
+  definition: "centre of crossing at nominal floor level"
+axes:
+  x_positive: east
+  y_positive: north
+  z_positive: up
+geographic_reference:
+  status: approximate_only
+  building_center_wgs84:
+    lat: 50.8150
+    lon: 8.76972
+  note: "Project reference only; prefer verified per-image GPS."

@@ -1,0 +1,19 @@
+official_elisabethkirche:
+  title: "Elisabethkirche Marburg — Allgemeines"
+  url: "https://www.elisabethkirche.de/kirchenraum/sehenswuerdiges/allgemeines"
+  use: "documented dimensions and architectural description"
+
+dehio:
+  title: "Dehio DE — Marburg, Elisabethkirche"
+  url: "https://de.dehio.org/bauwerk/marburg-elisabethkirche"
+  use: "scholarly dimensional and architectural cross-check"
+
+commons_main:
+  title: "Wikimedia Commons — Elisabethkirche (Marburg)"
+  url: "https://commons.wikimedia.org/wiki/Category:Elisabethkirche_(Marburg)"
+  use: "free/open photographic references"
+
+commons_plans:
+  title: "Wikimedia Commons — Plans of Elisabethkirche (Marburg)"
+  url: "https://commons.wikimedia.org/wiki/Category:Plans_of_Elisabethkirche_(Marburg)"
+  use: "historical public-domain plans, elevations and sections"

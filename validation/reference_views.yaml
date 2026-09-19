@@ -1,0 +1,19 @@
+views:
+  W:
+    evidence: [M10, M11]
+    status: camera_to_be_solved
+  SW:
+    evidence: [M09]
+    status: camera_to_be_solved
+  S:
+    evidence: [M04, M05]
+    status: camera_to_be_solved
+  SE:
+    evidence: [M02, M03, M19]
+    status: camera_to_be_solved
+  NE:
+    evidence: [M16, H03]
+    status: mixed_modern_historic
+  N:
+    evidence: [M06, M07]
+    status: camera_to_be_solved

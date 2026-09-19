@@ -1,0 +1,21 @@
+west:
+  status: strong
+  notes: "Multiple modern facade/portal/tower views."
+south:
+  status: strong
+  notes: "Several modern and historic views."
+north:
+  status: strong
+  notes: "Several modern and historic views plus sacristy."
+southeast_triconch:
+  status: strong
+  notes: "Multiple modern views including roof/choir detail."
+east:
+  status: medium
+  notes: "Historic east view useful; modern direct east coverage remains a gap."
+northeast:
+  status: medium
+  notes: "Sacristy and historic NE evidence available."
+roof:
+  status: partial
+  notes: "Aerial/raised and local roof views exist; full roof coverage remains limited."
