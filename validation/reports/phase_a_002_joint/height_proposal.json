@@ -1,0 +1,23 @@
+{
+  "keys": [
+    "wall_eave_z",
+    "tower_shaft_z",
+    "main_ridge_z",
+    "crossing_turret_tip_z"
+  ],
+  "before": [
+    22.5,
+    45.0,
+    32.5,
+    50.0
+  ],
+  "after": [
+    21.24186390366243,
+    42.77500532090858,
+    29.927456443469165,
+    50.99275850937439
+  ],
+  "withheld_view": "M02",
+  "optimizer_success": true,
+  "note": "Calibration data reused for refinement; training residuals are not independent validation."
+}

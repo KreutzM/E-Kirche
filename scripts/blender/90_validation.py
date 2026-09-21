@@ -2,7 +2,7 @@ from pathlib import Path
 import bpy
 
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/"validation"/"renders"
+OUT=ROOT/"validation"/"renders"/bpy.context.scene.get("iteration", "unversioned")
 OUT.mkdir(parents=True,exist_ok=True)
 
 scene=bpy.context.scene
@@ -17,6 +17,8 @@ if not cams:
 
 for cam in sorted(cams,key=lambda o:o.name):
     scene.camera=cam
+    scene.render.resolution_x = cam.get("image_width",1600)
+    scene.render.resolution_y = cam.get("image_height",1200)
     scene.render.filepath=str(OUT/f"{cam.name}.png")
     bpy.ops.render.render(write_still=True)
     print("rendered",cam.name)

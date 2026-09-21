@@ -25,24 +25,35 @@ def find_blender(explicit=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("task", choices=("smoke", "scene", "render", "build", "inspect"))
+    parser.add_argument("task", choices=("smoke", "scene", "render", "build", "inspect", "calibrate"))
     parser.add_argument("--blender")
     parser.add_argument("--output", type=Path, help="New .blend for build (never overwritten)")
     parser.add_argument("--scene", type=Path, help="Existing .blend to inspect/render")
+    parser.add_argument("--cameras", type=Path, help="Camera solution JSON for calibrate")
+    parser.add_argument("--iteration", default="phase_a_002")
+    parser.add_argument("--structure", action="store_true", help="Include exterior buttresses and recessed openings")
+    parser.add_argument("--assumptions", type=Path, default=ROOT / "data/assumptions.yaml")
     args = parser.parse_args()
     subprocess.run([os.sys.executable, str(ROOT / "scripts/validate_dataset.py")], check=True)
     env = os.environ.copy()
+    env["EKIRCHE_ITERATION"] = args.iteration
+    env["EKIRCHE_STRUCTURE"] = "1" if args.structure else "0"
+    if args.task == "calibrate":
+        if not args.cameras or not args.output:
+            parser.error("calibrate requires --cameras and --output")
+        env["EKIRCHE_CAMERAS"] = str(args.cameras.resolve())
+        env["EKIRCHE_OUTPUT"] = str(args.output.resolve())
     env["EKIRCHE_DIMENSIONS_JSON"] = json.dumps(yaml.safe_load((ROOT / "data/dimensions.yaml").read_text(encoding="utf-8")))
     if args.task == "build":
         subprocess.run([os.sys.executable, str(ROOT / "scripts/validate_dataset.py"), "--assets"], check=True)
         payload = {"dimensions": json.loads(env["EKIRCHE_DIMENSIONS_JSON"])}
-        for name, path in (("assumptions", "data/assumptions.yaml"), ("inspection", "validation/inspection_views.yaml")):
+        for name, path in (("assumptions", args.assumptions), ("inspection", "validation/inspection_views.yaml")):
             payload[name] = yaml.safe_load((ROOT / path).read_text(encoding="utf-8"))
         env["EKIRCHE_MODEL_JSON"] = json.dumps(payload)
-        env["EKIRCHE_OUTPUT"] = str((args.output or ROOT / "blender/scene/phase_a_001.blend").resolve())
+        env["EKIRCHE_OUTPUT"] = str((args.output or ROOT / "blender/scene" / f"{args.iteration}.blend").resolve())
     cmd = [find_blender(args.blender), "--background"]
     scene = args.scene or ROOT / ("blender/scene/phase_a_001.blend" if args.task == "inspect" else "blender/scene/elisabethkirche.blend")
-    if args.task in ("render", "inspect"):
+    if args.task in ("render", "inspect", "calibrate"):
         if not scene.exists():
             raise SystemExit("Scene missing; build and calibrate the model first.")
         cmd += [str(scene.resolve())]
@@ -54,7 +65,7 @@ def main():
             raise SystemExit("Scene already exists; preserve it before explicitly rebuilding.")
         scripts = ["00_scene_setup.py", "10_massing.py"]
     else:
-        scripts = [{"smoke": "smoke_test.py", "render": "90_validation.py", "build": "20_exterior.py", "inspect": "80_inspection.py"}[args.task]]
+        scripts = [{"smoke": "smoke_test.py", "render": "90_validation.py", "build": "20_exterior.py", "inspect": "80_inspection.py", "calibrate": "70_photo_cameras.py"}[args.task]]
     for script in scripts:
         cmd += ["--python", str(ROOT / "scripts/blender" / script)]
     return subprocess.run(cmd, cwd=ROOT, env=env).returncode

@@ -1,0 +1,668 @@
+{
+  "projection": "Pinhole, centred principal point, square pixels, zero distortion. These are hypotheses, not EXIF facts.",
+  "assumptions_sha256": "64e5099de64d12d8106e06aeb51b49a22abb6c816b94450290f41c52b627206b",
+  "observations_sha256": "43f0945394cd599602e62d9ec7796f00893439ed15e2f05c94dcd9b4cca6eb66",
+  "views": {
+    "M11": {
+      "camera": [
+        -139.54708714519646,
+        -61.66824783468899,
+        0.8000000000055287,
+        0.5893809947577143,
+        0.32417802236794124,
+        -0.035768241075916626,
+        1603.5188129521362
+      ],
+      "image_size": [
+        900,
+        1200
+      ],
+      "status": "provisional_model_dependent_camera_fit",
+      "optimizer_success": true,
+      "fit_rmse_px": 47.39597296129242,
+      "check_rmse_px": 63.0893444801115,
+      "parameters_at_bounds": [
+        2
+      ],
+      "points": [
+        {
+          "name": "tower_north_tip",
+          "uv": [
+            395,
+            188
+          ],
+          "sigma_px": 2,
+          "use": "fit",
+          "xyz": [
+            -40.75,
+            8.2,
+            80
+          ],
+          "projected_uv": [
+            398.7712806775841,
+            182.6771419045853
+          ],
+          "error_px": 6.523448187350075
+        },
+        {
+          "name": "tower_south_tip",
+          "uv": [
+            562,
+            106
+          ],
+          "sigma_px": 2,
+          "use": "fit",
+          "xyz": [
+            -40.75,
+            -8.2,
+            80
+          ],
+          "projected_uv": [
+            560.5821273162554,
+            113.79351983967263
+          ],
+          "error_px": 7.921446486512416
+        },
+        {
+          "name": "tower_north_helm_front",
+          "uv": [
+            384,
+            434
+          ],
+          "sigma_px": 4,
+          "use": "fit",
+          "xyz": [
+            -43.983578363789505,
+            8.2,
+            55.0
+          ],
+          "projected_uv": [
+            382.4708303887313,
+            432.4835866896932
+          ],
+          "error_px": 2.15357122652195
+        },
+        {
+          "name": "tower_south_helm_front",
+          "uv": [
+            561,
+            377
+          ],
+          "sigma_px": 4,
+          "use": "fit",
+          "xyz": [
+            -43.983578363789505,
+            -8.2,
+            55.0
+          ],
+          "projected_uv": [
+            557.2019508113428,
+            375.4812855363351
+          ],
+          "error_px": 4.090436561249203
+        },
+        {
+          "name": "west_portal_ground",
+          "uv": [
+            431,
+            1058
+          ],
+          "sigma_px": 8,
+          "use": "fit",
+          "xyz": [
+            -46.0,
+            0,
+            0
+          ],
+          "projected_uv": [
+            480.82654217907645,
+            1150.8575938102722
+          ],
+          "error_px": 105.38129356653762
+        },
+        {
+          "name": "tower_south_front_ground",
+          "uv": [
+            520,
+            1067
+          ],
+          "sigma_px": 15,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            -8.2,
+            0
+          ],
+          "projected_uv": [
+            588.799330855247,
+            1147.5372957672703
+          ],
+          "error_px": 105.9226318386893
+        },
+        {
+          "name": "tower_north_front_ground",
+          "uv": [
+            338,
+            1062
+          ],
+          "sigma_px": 15,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            8.2,
+            0
+          ],
+          "projected_uv": [
+            381.3146392676059,
+            1153.917709053598
+          ],
+          "error_px": 101.61212138590902
+        },
+        {
+          "name": "tower_north_shaft_front",
+          "uv": [
+            365,
+            559
+          ],
+          "sigma_px": 5,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            8.2,
+            45.0
+          ],
+          "projected_uv": [
+            369.5857047160541,
+            541.6207441560897
+          ],
+          "error_px": 17.97407080855451
+        },
+        {
+          "name": "tower_south_shaft_front",
+          "uv": [
+            551,
+            508
+          ],
+          "sigma_px": 5,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            -8.2,
+            45.0
+          ],
+          "projected_uv": [
+            550.5502780834488,
+            490.4039894542726
+          ],
+          "error_px": 17.601756643232395
+        },
+        {
+          "name": "tower_north_eave_front",
+          "uv": [
+            350,
+            804
+          ],
+          "sigma_px": 6,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            8.2,
+            22.5
+          ],
+          "projected_uv": [
+            375.09228277379555,
+            829.085988071208
+          ],
+          "error_px": 35.48139586190075
+        },
+        {
+          "name": "tower_south_eave_front",
+          "uv": [
+            548,
+            792
+          ],
+          "sigma_px": 6,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            -8.2,
+            22.5
+          ],
+          "projected_uv": [
+            568.4150021198051,
+            797.3267580368148
+          ],
+          "error_px": 21.098499063545184
+        }
+      ]
+    },
+    "M10": {
+      "camera": [
+        -107.24748182669207,
+        -41.849954172363056,
+        0.8000000000000002,
+        0.5352475113311308,
+        0.38541508429633153,
+        0.010759387308668208,
+        1216.8383883523472
+      ],
+      "image_size": [
+        800,
+        1200
+      ],
+      "status": "provisional_model_dependent_camera_fit",
+      "optimizer_success": true,
+      "fit_rmse_px": 17.584900174236783,
+      "check_rmse_px": 27.504199212367748,
+      "parameters_at_bounds": [
+        2
+      ],
+      "points": [
+        {
+          "name": "tower_north_tip",
+          "uv": [
+            282,
+            119
+          ],
+          "sigma_px": 2,
+          "use": "fit",
+          "xyz": [
+            -40.75,
+            8.2,
+            80
+          ],
+          "projected_uv": [
+            300.79259227271143,
+            115.40162562160708
+          ],
+          "error_px": 19.133996511326327
+        },
+        {
+          "name": "tower_south_tip",
+          "uv": [
+            469,
+            38
+          ],
+          "sigma_px": 2,
+          "use": "fit",
+          "xyz": [
+            -40.75,
+            -8.2,
+            80
+          ],
+          "projected_uv": [
+            467.3537363517183,
+            40.432696368547454
+          ],
+          "error_px": 2.9373790394155463
+        },
+        {
+          "name": "tower_north_helm_front",
+          "uv": [
+            264,
+            340
+          ],
+          "sigma_px": 4,
+          "use": "fit",
+          "xyz": [
+            -43.983578363789505,
+            8.2,
+            55.0
+          ],
+          "projected_uv": [
+            263.9021331050892,
+            338.68429355402475
+          ],
+          "error_px": 1.3193412678682908
+        },
+        {
+          "name": "tower_south_helm_front",
+          "uv": [
+            467,
+            274
+          ],
+          "sigma_px": 4,
+          "use": "fit",
+          "xyz": [
+            -43.983578363789505,
+            -8.2,
+            55.0
+          ],
+          "projected_uv": [
+            450.17126955620114,
+            273.32156285240234
+          ],
+          "error_px": 16.842400224234165
+        },
+        {
+          "name": "west_portal_ground",
+          "uv": [
+            300,
+            1080
+          ],
+          "sigma_px": 8,
+          "use": "fit",
+          "xyz": [
+            -46.0,
+            0,
+            0
+          ],
+          "projected_uv": [
+            309.76473382053496,
+            1108.1184711407366
+          ],
+          "error_px": 29.765726026393757
+        },
+        {
+          "name": "tower_south_front_ground",
+          "uv": [
+            454,
+            1092
+          ],
+          "sigma_px": 15,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            -8.2,
+            0
+          ],
+          "projected_uv": [
+            437.875234520397,
+            1110.4223766380667
+          ],
+          "error_px": 24.482483999116226
+        },
+        {
+          "name": "tower_north_front_ground",
+          "uv": [
+            179,
+            1080
+          ],
+          "sigma_px": 15,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            8.2,
+            0
+          ],
+          "projected_uv": [
+            195.41332984860387,
+            1106.0620056144987
+          ],
+          "error_px": 30.799765151202596
+        },
+        {
+          "name": "tower_north_shaft_front",
+          "uv": [
+            245,
+            472
+          ],
+          "sigma_px": 5,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            8.2,
+            45.0
+          ],
+          "projected_uv": [
+            240.3909469715255,
+            440.44592985092106
+          ],
+          "error_px": 31.888912066614697
+        },
+        {
+          "name": "tower_south_shaft_front",
+          "uv": [
+            459,
+            405
+          ],
+          "sigma_px": 5,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            -8.2,
+            45.0
+          ],
+          "projected_uv": [
+            436.709438528555,
+            380.46819036769045
+          ],
+          "error_px": 33.14632429920616
+        },
+        {
+          "name": "tower_north_eave_front",
+          "uv": [
+            217,
+            752
+          ],
+          "sigma_px": 6,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            8.2,
+            22.5
+          ],
+          "projected_uv": [
+            220.26138243142992,
+            738.3399183072344
+          ],
+          "error_px": 14.044018200538991
+        },
+        {
+          "name": "tower_south_eave_front",
+          "uv": [
+            454,
+            723
+          ],
+          "sigma_px": 6,
+          "use": "check",
+          "xyz": [
+            -46.0,
+            -8.2,
+            22.5
+          ],
+          "projected_uv": [
+            437.2246823631931,
+            703.0841512013125
+          ],
+          "error_px": 26.039437689549835
+        }
+      ]
+    },
+    "M03": {
+      "camera": [
+        79.9801138405649,
+        -56.34337503158404,
+        0.8000000000000002,
+        2.5033292224170216,
+        0.2841583881588868,
+        0.03307850650096022,
+        1388.8878179105639
+      ],
+      "image_size": [
+        1200,
+        895
+      ],
+      "status": "provisional_model_dependent_camera_fit",
+      "optimizer_success": true,
+      "fit_rmse_px": 6.576352490511595,
+      "check_rmse_px": 37.283193316730824,
+      "parameters_at_bounds": [
+        2
+      ],
+      "points": [
+        {
+          "name": "tower_south_tip",
+          "uv": [
+            289,
+            39
+          ],
+          "sigma_px": 2,
+          "use": "fit",
+          "xyz": [
+            -40.75,
+            -8.2,
+            80
+          ],
+          "projected_uv": [
+            289.7787780849809,
+            40.23214074742447
+          ],
+          "error_px": 1.4576234517563995
+        },
+        {
+          "name": "tower_north_tip",
+          "uv": [
+            429,
+            96
+          ],
+          "sigma_px": 2,
+          "use": "fit",
+          "xyz": [
+            -40.75,
+            8.2,
+            80
+          ],
+          "projected_uv": [
+            428.2064425856638,
+            94.29240463752677
+          ],
+          "error_px": 1.882980427882355
+        },
+        {
+          "name": "tower_south_helm_east",
+          "uv": [
+            282,
+            251
+          ],
+          "sigma_px": 5,
+          "use": "fit",
+          "xyz": [
+            -37.516421636210495,
+            -8.2,
+            55.0
+          ],
+          "projected_uv": [
+            279.7110720613143,
+            254.16801332770982
+          ],
+          "error_px": 3.9083883575001686
+        },
+        {
+          "name": "tower_north_helm_east",
+          "uv": [
+            426,
+            298
+          ],
+          "sigma_px": 5,
+          "use": "fit",
+          "xyz": [
+            -37.516421636210495,
+            8.2,
+            55.0
+          ],
+          "projected_uv": [
+            428.01835097619914,
+            297.7655704864271
+          ],
+          "error_px": 2.031919747420664
+        },
+        {
+          "name": "south_conch_ground",
+          "uv": [
+            378,
+            798
+          ],
+          "sigma_px": 30,
+          "use": "excluded_occluded",
+          "xyz": [
+            0,
+            -20.506339097770923,
+            0
+          ],
+          "projected_uv": [
+            266.3977271998984,
+            856.4602879989918
+          ],
+          "error_px": 125.98679520915422
+        },
+        {
+          "name": "east_conch_ground",
+          "uv": [
+            711,
+            796
+          ],
+          "sigma_px": 30,
+          "use": "excluded_occluded",
+          "xyz": [
+            20.506339097770923,
+            0,
+            0
+          ],
+          "projected_uv": [
+            761.1328244770931,
+            873.5724136208512
+          ],
+          "error_px": 92.36221870990023
+        },
+        {
+          "name": "south_conch_ridge",
+          "uv": [
+            394,
+            374
+          ],
+          "sigma_px": 5,
+          "use": "fit",
+          "xyz": [
+            0,
+            -14.8,
+            32.5
+          ],
+          "projected_uv": [
+            392.3638382463968,
+            359.85506196778897
+          ],
+          "error_px": 14.239251989449581
+        },
+        {
+          "name": "east_conch_ridge",
+          "uv": [
+            699,
+            349
+          ],
+          "sigma_px": 5,
+          "use": "fit",
+          "xyz": [
+            14.8,
+            0,
+            32.5
+          ],
+          "projected_uv": [
+            700.685331650257,
+            354.36836601345766
+          ],
+          "error_px": 5.626694982474642
+        },
+        {
+          "name": "crossing_turret_tip",
+          "uv": [
+            574,
+            154
+          ],
+          "sigma_px": 3,
+          "use": "check",
+          "xyz": [
+            0,
+            0,
+            50.0
+          ],
+          "projected_uv": [
+            577.4948635797724,
+            191.11903059687177
+          ],
+          "error_px": 37.283193316730824
+        }
+      ]
+    }
+  }
+}

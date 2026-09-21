@@ -2,6 +2,7 @@
 import json
 import math
 import os
+import runpy
 from pathlib import Path
 
 import bmesh
@@ -13,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 payload = json.loads(os.environ["EKIRCHE_MODEL_JSON"])
 A = payload["assumptions"]["assumptions"]
 D = payload["dimensions"]
-iteration = "phase_a_001"
+iteration = os.environ.get("EKIRCHE_ITERATION", "phase_a_002")
 out = Path(os.environ["EKIRCHE_OUTPUT"])
 if out.exists():
     raise RuntimeError(f"Refusing to overwrite working artifact: {out}")
@@ -204,6 +205,9 @@ prism("Sacristy_envelope", poly, p("sacristy_eave_z"), keys=skeys)
 prism("Sacristy_connector_envelope", rect(h, sx-dx, sy-dy, sy+dy), p("sacristy_eave_z"), keys=skeys+["conch_half_width"])
 mesh("Sacristy_pyramid_roof", [(x,y,p("sacristy_eave_z")) for x,y in poly]+[(sx,sy,p("sacristy_roof_z"))],
      [(3,2,1,0),(0,1,4),(1,2,4),(2,3,4),(3,0,4)], "ROOFS", slate, skeys)
+
+if os.environ.get("EKIRCHE_STRUCTURE") == "1":
+    runpy.run_path(str(ROOT/"scripts/blender/30_structure.py"),init_globals=dict(globals()))
 
 # Fixed diagnostic cameras, deliberately not named VAL_*.
 settings = payload["inspection"]

@@ -82,7 +82,7 @@ Langhaus, Dreikonchenchor, Westtürme, Hauptdächer und Sakristei. Noch keine Fe
 Strebepfeiler oder Schmuckdetails; die Fotokalibrierung steht aus.
 
 ```bash
-python scripts/run_blender.py build --output tmp/rebuilt_phase_a_001.blend
+python scripts/run_blender.py build --iteration phase_a_001 --assumptions data/iterations/phase_a_001_assumptions.yaml --output tmp/rebuilt_phase_a_001.blend
 python scripts/run_blender.py inspect --scene tmp/rebuilt_phase_a_001.blend
 python scripts/report_iteration.py
 ```
@@ -95,3 +95,25 @@ Die synthetischen `INSPECT_*`-Ansichten sind keine gelösten Fotokameras.
 
 Ergebnisse, Unsicherheiten und nächste Arbeitsschritte:
 [Iterationsbericht](docs/iterations/phase_a_001.md).
+
+## Aktueller Arbeitsstand: Phase A 002 (nicht abgenommen)
+
+`blender/scene/phase_a_002.blend` ergänzt Strebepfeiler, vertiefte Fenster und
+vier provisorische Fotokameras. Die Silhouettenprüfung ist noch nicht bestanden.
+Details und offene Abweichungen: [Iterationsbericht 002](docs/iterations/phase_a_002.md).
+
+Reproduktion mit vorhandenen Referenzbildern und neuen Ausgabepfaden:
+
+```powershell
+python -m pip install -r requirements-calibration.txt
+python scripts/prepare_calibration_views.py
+python scripts/solve_cameras.py --output phase_a_002
+python scripts/run_blender.py build --structure --iteration phase_a_002 --output tmp/rebuild_structure.blend
+python scripts/run_blender.py calibrate --scene tmp/rebuild_structure.blend --cameras validation/reports/phase_a_002/camera_solutions.json --output tmp/rebuild_calibrated.blend
+python scripts/run_blender.py render --scene tmp/rebuild_calibrated.blend
+python scripts/photo_overlays.py phase_a_002
+python scripts/run_blender.py inspect --scene tmp/rebuild_structure.blend
+```
+
+`--refine` im Kamerasolver erzeugt nur einen Höhenvorschlag; es ändert keine
+Modellparameter automatisch. Fit-Residuen sind keine unabhängige Genauigkeitsmessung.

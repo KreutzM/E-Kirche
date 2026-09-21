@@ -1,7 +1,8 @@
 views:
   W:
     evidence: [M10, M11]
-    status: camera_to_be_solved
+    status: provisional_model_dependent_fit_not_validated
+    cameras: [VAL_M10, VAL_M11]
   SW:
     evidence: [M09]
     status: camera_to_be_solved
@@ -10,7 +11,8 @@ views:
     status: camera_to_be_solved
   SE:
     evidence: [M02, M03, M19]
-    status: camera_to_be_solved
+    status: provisional_model_dependent_fit_not_validated
+    cameras: [VAL_M02, VAL_M03]
   NE:
     evidence: [M16, H03]
     status: mixed_modern_historic
