@@ -27,8 +27,9 @@ identischer Steinverband oder exakter Schieferdeckungsplan behauptet.
 - Sichtbare Fenster besitzen Steinrahmen und vereinfachtes Maßwerk als Geometrie.
 - Glas ist opak hinterlegt: kein Innenraum und keine Innenbeleuchtung sind erfunden.
 - Shader-Bump verändert nur die Beleuchtung, nicht die druckbare Oberfläche.
-- Procedural Nodes werden von Blender gerendert. Für einen späteren glTF-/anderen
-  Materialexport müssten sie separat gebacken werden; ein solcher Export ist hier nicht enthalten.
+- Für den [Webexport](../web/README.md) werden die prozeduralen Farbmuster in
+  wiederholbare Bildtexturen gebacken. Shader-Bump und objektabhängige Wetterung
+  bleiben in der Blender-Version detailreicher als im Webmodell.
 - Die `.blend` benötigt zum Anzeigen/Rendern keine Originalfotos. Für einen Neuaufbau
   fordert der bestehende Build-Workflow weiterhin die Referenz-Asset-Prüfung an.
 - `present` fügt nur für den Renderprozess einen Studioboden, Licht und Präsentationskameras

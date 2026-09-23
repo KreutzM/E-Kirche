@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171b1c">
+  <title>Elisabethkirche Marburg · 3D-Modell</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #171b1c; color: #f6f2e9; }
+    main { min-height: 100vh; display: grid; grid-template-rows: auto minmax(24rem, 1fr) auto; }
+    header, footer { padding: 1rem clamp(1rem, 3vw, 2.5rem); }
+    header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .3rem 1.5rem; }
+    h1 { margin: 0; font-size: clamp(1.25rem, 2vw, 1.8rem); font-weight: 600; letter-spacing: -.025em; }
+    header p, footer p { margin: 0; color: #c8c8c0; font-size: .93rem; }
+    .stage { position: relative; min-height: 24rem; margin: 0 clamp(.6rem, 2vw, 1.5rem); overflow: hidden; border: 1px solid #3b4242; border-radius: 1rem; background: radial-gradient(ellipse at 50% 35%, #737b7b, #384243 58%, #232b2c); }
+    model-viewer { display: block; width: 100%; height: 100%; min-height: 24rem; --poster-color: transparent; }
+    .hint { position: absolute; bottom: 1rem; left: 1rem; max-width: calc(100% - 2rem); padding: .55rem .8rem; border-radius: .5rem; background: #171b1cdb; color: #f6f2e9; font-size: .86rem; pointer-events: none; }
+    footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    a { color: #e0c49a; }
+    button { color: #f6f2e9; background: #333e3f; border: 1px solid #788382; border-radius: .4rem; padding: .5rem .75rem; cursor: pointer; font: inherit; }
+    button:hover, button:focus-visible { background: #4a5758; }
+    #status { display: none; position: absolute; top: 1rem; left: 1rem; right: 1rem; padding: .75rem; background: #542b28; border-radius: .5rem; }
+    #status.visible { display: block; }
+    .stage:fullscreen { margin: 0; border: 0; border-radius: 0; }
+    .stage:fullscreen model-viewer { height: 100vh; }
+    @media (max-width: 600px) { main { grid-template-rows: auto minmax(20rem, 1fr) auto; } .stage, model-viewer { min-height: 20rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Elisabethkirche Marburg</h1>
+      <p>Interaktives 3D-Modell der heutigen Außenansicht</p>
+    </header>
+    <section class="stage" aria-label="3D-Ansicht der Elisabethkirche">
+      <model-viewer id="church" src="assets/elisabethkirche.glb" poster="assets/preview.png"
+        alt="Vereinfachtes, texturiertes 3D-Modell der Elisabethkirche Marburg mit zwei Westtürmen und Dreikonchenchor"
+        camera-controls auto-rotate shadow-intensity="1" exposure="1.1" touch-action="pan-y">
+      </model-viewer>
+      <div class="hint">Mit Maus oder Finger drehen · Scrollen oder zwei Finger zum Zoomen</div>
+      <div id="status" role="alert"></div>
+    </section>
+    <footer>
+      <p>Visuelle Rekonstruktion des Außenbaus · <a href="https://github.com/KreutzM/E-Kirche/blob/main/docs/iterations/phase_a_004.md">Modell und Quellen</a></p>
+      <button id="fullscreen" type="button">Vollbild</button>
+    </footer>
+  </main>
+  <script>
+    const viewer = document.getElementById('church');
+    const status = document.getElementById('status');
+    viewer.addEventListener('error', () => {
+      status.textContent = 'Das 3D-Modell konnte nicht geladen werden. Bitte die Seite über einen Webserver öffnen und die GLB-Datei prüfen.';
+      status.classList.add('visible');
+    });
+    document.getElementById('fullscreen').addEventListener('click', () => {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.querySelector('.stage').requestFullscreen();
+    });
+  </script>
+</body>
+</html>

@@ -4,9 +4,11 @@ Reproduzierbare, quellenbasierte 3D-Rekonstruktion der **Außenarchitektur** der
 
 Aktueller Arbeitsstand: [PR 2 / Phase A 004](docs/iterations/phase_a_004.md),
 `blender/scene/phase_a_004.blend`. Ziel gemäß [Tracking-Issue #9](https://github.com/KreutzM/E-Kirche/issues/9):
-optisch plausibles texturiertes Sichtmodell und separate taktile Druckvorlage für ca. 20 cm.
-Außendetails und selbstständige prozedurale Texturen sind enthalten. Druckgerechte Geometrie
-folgt in PR 3; dieser Stand ist noch keine Druckvorlage. [Materialien und Herkunft](docs/materials.md).
+optisch plausibles texturiertes Sichtmodell. Außendetails und selbstständige prozedurale
+Texturen sind enthalten. Die [interaktive Webansicht](web/README.md) enthält ein
+eigenständiges GLB und eine einbettbare HTML-Seite. Die taktile Druckvorlage ist
+als [spätere Aufgabe #12](https://github.com/KreutzM/E-Kirche/issues/12) vorgesehen.
+[Materialien und Herkunft](docs/materials.md).
 
 ## Ziel
 
