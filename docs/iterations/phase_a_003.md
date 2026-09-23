@@ -55,7 +55,7 @@ Sakristei-Anschluss, Gesimsprofile und kleine Asymmetrien bleiben vereinfachte A
 Mit vorhandenen Referenzbildern, `requirements.txt` und Blender; Ausgabepfade müssen neu sein:
 
 ```powershell
-python scripts/run_blender.py build --structure --iteration phase_a_003 --output tmp/rebuild_003.blend
+python scripts/run_blender.py build --structure --iteration phase_a_003 --assumptions data/iterations/phase_a_003_assumptions.yaml --output tmp/rebuild_003.blend
 python scripts/run_blender.py calibrate --scene tmp/rebuild_003.blend --iteration phase_a_003 --cameras validation/reports/phase_a_002/camera_solutions.json --output tmp/rebuild_003_cameras.blend
 python scripts/run_blender.py verify-form --scene tmp/rebuild_003_cameras.blend
 python scripts/run_blender.py inspect --scene tmp/rebuild_003.blend

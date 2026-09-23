@@ -183,6 +183,10 @@ for side in (-1, 1):
         x1 = x0+span
         # Hipped outer end; transverse ridge runs towards central nave roof.
         y0, y1 = side*h, side*(w+over)
+        if "tracery_radius" in A:
+            # Match the transverse ridge to the sloping central roof, instead
+            # of leaving an exposed vertical triangular end at the nave eave.
+            y0 = side*(h+over)*(p("main_ridge_z")-p("side_roof_ridge_z"))/(p("main_ridge_z")-eave)
         polygon = [(x0,y0),(x1,y0),(x1,y1),(x0,y1)]
         hip_inset = p("side_roof_hip_inset") if "side_roof_hip_inset" in A else span/2
         apex = [((x0+x1)/2,y0,p("side_roof_ridge_z")), ((x0+x1)/2,side*(w-hip_inset),p("side_roof_ridge_z"))]

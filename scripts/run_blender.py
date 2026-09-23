@@ -25,7 +25,7 @@ def find_blender(explicit=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("task", choices=("smoke", "scene", "render", "build", "inspect", "calibrate", "verify-form"))
+    parser.add_argument("task", choices=("smoke", "scene", "render", "build", "inspect", "calibrate", "verify-form", "present"))
     parser.add_argument("--blender")
     parser.add_argument("--output", type=Path, help="New .blend for build (never overwritten)")
     parser.add_argument("--scene", type=Path, help="Existing .blend to inspect/render")
@@ -54,7 +54,7 @@ def main():
         env["EKIRCHE_OUTPUT"] = str((args.output or ROOT / "blender/scene" / f"{args.iteration}.blend").resolve())
     cmd = [find_blender(args.blender), "--background"]
     scene = args.scene or ROOT / ("blender/scene/phase_a_001.blend" if args.task == "inspect" else "blender/scene/elisabethkirche.blend")
-    if args.task in ("render", "inspect", "calibrate", "verify-form"):
+    if args.task in ("render", "inspect", "calibrate", "verify-form", "present"):
         if not scene.exists():
             raise SystemExit("Scene missing; build and calibrate the model first.")
         cmd += [str(scene.resolve())]
@@ -66,7 +66,7 @@ def main():
             raise SystemExit("Scene already exists; preserve it before explicitly rebuilding.")
         scripts = ["00_scene_setup.py", "10_massing.py"]
     else:
-        scripts = [{"smoke": "smoke_test.py", "render": "90_validation.py", "build": "20_exterior.py", "inspect": "80_inspection.py", "calibrate": "70_photo_cameras.py", "verify-form": "85_verify_form.py"}[args.task]]
+        scripts = [{"smoke": "smoke_test.py", "render": "90_validation.py", "build": "20_exterior.py", "inspect": "80_inspection.py", "calibrate": "70_photo_cameras.py", "verify-form": "85_verify_form.py", "present": "95_presentation.py"}[args.task]]
     for script in scripts:
         cmd += ["--python", str(ROOT / "scripts/blender" / script)]
     return subprocess.run(cmd, cwd=ROOT, env=env).returncode

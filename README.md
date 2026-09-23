@@ -2,10 +2,11 @@
 
 Reproduzierbare, quellenbasierte 3D-Rekonstruktion der **Außenarchitektur** der Elisabethkirche in Marburg.
 
-Aktueller Arbeitsstand: [PR 1 / Phase A 003](docs/iterations/phase_a_003.md),
-`blender/scene/phase_a_003.blend`. Ziel gemäß [Tracking-Issue #9](https://github.com/KreutzM/E-Kirche/issues/9):
+Aktueller Arbeitsstand: [PR 2 / Phase A 004](docs/iterations/phase_a_004.md),
+`blender/scene/phase_a_004.blend`. Ziel gemäß [Tracking-Issue #9](https://github.com/KreutzM/E-Kirche/issues/9):
 optisch plausibles texturiertes Sichtmodell und separate taktile Druckvorlage für ca. 20 cm.
-Texturierung folgt in PR 2, druckgerechte Geometrie in PR 3; dieser Stand ist noch keine Druckvorlage.
+Außendetails und selbstständige prozedurale Texturen sind enthalten. Druckgerechte Geometrie
+folgt in PR 3; dieser Stand ist noch keine Druckvorlage. [Materialien und Herkunft](docs/materials.md).
 
 ## Ziel
 

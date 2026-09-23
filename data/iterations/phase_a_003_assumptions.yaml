@@ -1,26 +1,4 @@
 assumptions:
-  west_gable_tip_z: {value: 34.0, unit: m, reason: "Simplified pointed central clock gable above west hall, visually inferred.", confidence: low, evidence_ids: [M11, M14], iteration: phase_a_004}
-  west_gable_depth: {value: 0.65, unit: m, reason: "Working exterior gable thickness, not a masonry survey.", confidence: low, evidence_ids: [M14], iteration: phase_a_004}
-  west_clock_window_width: {value: 2.6, unit: m, reason: "Slender central light within gable.", confidence: low, evidence_ids: [M14], iteration: phase_a_004}
-  west_clock_window_top_z: {value: 29.5, unit: m, reason: "Clock light apex below decorative central gable.", confidence: low, evidence_ids: [M11, M14], iteration: phase_a_004}
-  west_clock_center_z: {value: 26.0, unit: m, reason: "Visual clock position within central light.", confidence: low, evidence_ids: [M11, M14], iteration: phase_a_004}
-  west_clock_radius: {value: 0.95, unit: m, reason: "Simplified open clock ring; decorative hands not a historical time claim.", confidence: low, evidence_ids: [M14], iteration: phase_a_004}
-  tracery_radius: {value: 0.085, unit: m, reason: "Visual stone mullion half-thickness; not a printable minimum.", confidence: low, evidence_ids: [M16, M19], iteration: phase_a_004}
-  window_frame_radius: {value: 0.14, unit: m, reason: "Simplified raised arch moulding radius.", confidence: low, evidence_ids: [M19], iteration: phase_a_004}
-  window_rose_ratio: {value: 0.22, unit: ratio, reason: "Rose radius relative to opening width; common paired-lancet approximation, not an exact tracery survey.", confidence: low, evidence_ids: [M16, M19], iteration: phase_a_004}
-  pinnacle_radius: {value: 0.65, unit: m, reason: "Tower corner pinnacle mass inferred from M11; crockets omitted.", confidence: low, evidence_ids: [M09, M11], iteration: phase_a_004}
-  pinnacle_body_height: {value: 3.0, unit: m, reason: "Square pinnacle shaft above tower gable spring.", confidence: low, evidence_ids: [M11], iteration: phase_a_004}
-  pinnacle_tip_height: {value: 9.0, unit: m, reason: "Total corner pinnacle rise above shaft, visual silhouette approximation.", confidence: low, evidence_ids: [M11], iteration: phase_a_004}
-  tower_gable_opening_width: {value: 2.6, unit: m, reason: "Upper pointed opening in gabled tower stage.", confidence: low, evidence_ids: [M11, M19], iteration: phase_a_004}
-  tower_gable_opening_sill_z: {value: 43.5, unit: m, reason: "Upper opening sill above gable-stage belt.", confidence: low, evidence_ids: [M11], iteration: phase_a_004}
-  tower_gable_opening_top_z: {value: 50.5, unit: m, reason: "Upper opening terminates beneath gable apex.", confidence: low, evidence_ids: [M11], iteration: phase_a_004}
-  portal_door_head_z: {value: 5.0, unit: m, reason: "Rectangular red double door below simplified stone tympanum.", confidence: low, evidence_ids: [M12], iteration: phase_a_004}
-  portal_archivolt_count: {value: 3, unit: count, reason: "Three simplified nested raised mouldings; full sculptural profiles omitted.", confidence: low, evidence_ids: [M12], iteration: phase_a_004}
-  stone_course_height: {value: 0.38, unit: m, reason: "Procedural sandstone course spacing for visual texture, not surveyed masonry.", confidence: low, evidence_ids: [M12, M19], iteration: phase_a_004}
-  stone_block_width: {value: 0.75, unit: m, reason: "Procedural average ashlar length, artistic approximation.", confidence: low, evidence_ids: [M12, M19], iteration: phase_a_004}
-  stone_joint_width: {value: 0.012, unit: m, reason: "Visual mortar joint width in shader only.", confidence: low, evidence_ids: [M12, M19], iteration: phase_a_004}
-  slate_course_height: {value: 0.23, unit: m, reason: "Procedural slate row spacing; simplified overlapping rectangular tiles.", confidence: low, evidence_ids: [M17, M18], iteration: phase_a_004}
-  slate_tile_width: {value: 0.32, unit: m, reason: "Procedural slate tile width, not individually measured.", confidence: low, evidence_ids: [M17, M18], iteration: phase_a_004}
   tower_buttress_width_base: {value: 2.2, unit: m, reason: "Broader paired tower corner piers inferred visually from M10/M11; independent of choir piers.", confidence: low, evidence_ids: [M10, M11], iteration: phase_a_003}
   tower_buttress_width_mid: {value: 1.8, unit: m, reason: "Visual middle tower pier setback.", confidence: low, evidence_ids: [M10, M11], iteration: phase_a_003}
   tower_buttress_width_top: {value: 1.35, unit: m, reason: "Upper tower pier width inferred from west silhouette.", confidence: low, evidence_ids: [M10, M11], iteration: phase_a_003}
