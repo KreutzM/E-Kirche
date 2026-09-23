@@ -18,7 +18,10 @@
     .stage { position: relative; min-height: 24rem; margin: 0 clamp(.6rem, 2vw, 1.5rem); overflow: hidden; border: 1px solid #3b4242; border-radius: 1rem; background: radial-gradient(ellipse at 50% 35%, #737b7b, #384243 58%, #232b2c); }
     model-viewer { display: block; width: 100%; height: 100%; min-height: 24rem; --poster-color: transparent; }
     .hint { position: absolute; bottom: 1rem; left: 1rem; max-width: calc(100% - 2rem); padding: .55rem .8rem; border-radius: .5rem; background: #171b1cdb; color: #f6f2e9; font-size: .86rem; pointer-events: none; }
-    footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .controls { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+    .controls label { color: #c8c8c0; font-size: .93rem; }
+    .controls input { width: 8rem; accent-color: #e0c49a; }
     a { color: #e0c49a; }
     button { color: #f6f2e9; background: #333e3f; border: 1px solid #788382; border-radius: .4rem; padding: .5rem .75rem; cursor: pointer; font: inherit; }
     button:hover, button:focus-visible { background: #4a5758; }
@@ -38,14 +41,19 @@
     <section class="stage" aria-label="3D-Ansicht der Elisabethkirche">
       <model-viewer id="church" src="assets/elisabethkirche.glb" poster="assets/preview.png"
         alt="Vereinfachtes, texturiertes 3D-Modell der Elisabethkirche Marburg mit zwei Westtürmen und Dreikonchenchor"
-        camera-controls auto-rotate shadow-intensity="1" exposure="1.1" touch-action="pan-y">
+        camera-controls auto-rotate camera-orbit="40deg 75deg auto"
+        shadow-intensity="1" tone-mapping="agx" exposure="0.7" touch-action="pan-y">
       </model-viewer>
       <div class="hint">Mit Maus oder Finger drehen · Scrollen oder zwei Finger zum Zoomen</div>
       <div id="status" role="alert"></div>
     </section>
     <footer>
       <p>Visuelle Rekonstruktion des Außenbaus · <a href="https://github.com/KreutzM/E-Kirche/blob/main/docs/iterations/phase_a_004.md">Modell und Quellen</a></p>
-      <button id="fullscreen" type="button">Vollbild</button>
+      <div class="controls">
+        <label for="exposure">Helligkeit</label>
+        <input id="exposure" type="range" min="0.4" max="1.2" step="0.05" value="0.7">
+        <button id="fullscreen" type="button">Vollbild</button>
+      </div>
     </footer>
   </main>
   <script>
@@ -54,6 +62,9 @@
     viewer.addEventListener('error', () => {
       status.textContent = 'Das 3D-Modell konnte nicht geladen werden. Bitte die Seite über einen Webserver öffnen und die GLB-Datei prüfen.';
       status.classList.add('visible');
+    });
+    document.getElementById('exposure').addEventListener('input', event => {
+      viewer.exposure = Number(event.target.value);
     });
     document.getElementById('fullscreen').addEventListener('click', () => {
       if (document.fullscreenElement) document.exitFullscreen();
