@@ -2,6 +2,11 @@
 
 Reproduzierbare, quellenbasierte 3D-Rekonstruktion der **Außenarchitektur** der Elisabethkirche in Marburg.
 
+Aktueller Arbeitsstand: [PR 1 / Phase A 003](docs/iterations/phase_a_003.md),
+`blender/scene/phase_a_003.blend`. Ziel gemäß [Tracking-Issue #9](https://github.com/KreutzM/E-Kirche/issues/9):
+optisch plausibles texturiertes Sichtmodell und separate taktile Druckvorlage für ca. 20 cm.
+Texturierung folgt in PR 2, druckgerechte Geometrie in PR 3; dieser Stand ist noch keine Druckvorlage.
+
 ## Ziel
 
 Ein metrisch kohärentes Blender-Modell aus frei verfügbaren Web-Ressourcen, dokumentierten Maßen,
@@ -96,7 +101,7 @@ Die synthetischen `INSPECT_*`-Ansichten sind keine gelösten Fotokameras.
 Ergebnisse, Unsicherheiten und nächste Arbeitsschritte:
 [Iterationsbericht](docs/iterations/phase_a_001.md).
 
-## Aktueller Arbeitsstand: Phase A 002 (nicht abgenommen)
+## Archivierter Arbeitsstand: Phase A 002 (nicht abgenommen)
 
 `blender/scene/phase_a_002.blend` ergänzt Strebepfeiler, vertiefte Fenster und
 vier provisorische Fotokameras. Die Silhouettenprüfung ist noch nicht bestanden.
@@ -107,8 +112,8 @@ Reproduktion mit vorhandenen Referenzbildern und neuen Ausgabepfaden:
 ```powershell
 python -m pip install -r requirements-calibration.txt
 python scripts/prepare_calibration_views.py
-python scripts/solve_cameras.py --output phase_a_002
-python scripts/run_blender.py build --structure --iteration phase_a_002 --output tmp/rebuild_structure.blend
+python scripts/solve_cameras.py --assumptions data/iterations/phase_a_002_assumptions.yaml --output phase_a_002
+python scripts/run_blender.py build --structure --iteration phase_a_002 --assumptions data/iterations/phase_a_002_assumptions.yaml --output tmp/rebuild_structure.blend
 python scripts/run_blender.py calibrate --scene tmp/rebuild_structure.blend --cameras validation/reports/phase_a_002/camera_solutions.json --output tmp/rebuild_calibrated.blend
 python scripts/run_blender.py render --scene tmp/rebuild_calibrated.blend
 python scripts/photo_overlays.py phase_a_002
