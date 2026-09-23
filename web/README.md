@@ -1,10 +1,9 @@
 # Webviewer
 
 `index.html` zeigt das texturierte Außensichtmodell mit Dreh-, Zoom- und
-Touchsteuerung sowie einem Regler für die Helligkeit. Der Viewer verwendet
-AgX-Tonemapping und eine reduzierte Standardbelichtung, damit der Eindruck
-der Blender-Vorschau näherkommt. Die exakte Wirkung hängt weiterhin von
-Browser, Bildschirm und Beleuchtung des Webviewers ab.
+Touchsteuerung. Der Viewer nutzt neutrales Tonemapping und eine moderat
+reduzierte Belichtung. Ein dunkler Hintergrund trennt das Modell klar vom
+Umfeld. Die genaue Wirkung hängt weiterhin von Browser und Bildschirm ab.
 
 `assets/elisabethkirche.glb` enthält Geometrie und vier gebackene
 Farbbildtexturen; `assets/preview.png` ist das Vorschaubild. Es werden keine
