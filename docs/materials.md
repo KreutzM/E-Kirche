@@ -28,8 +28,9 @@ identischer Steinverband oder exakter Schieferdeckungsplan behauptet.
 - Glas ist opak hinterlegt: kein Innenraum und keine Innenbeleuchtung sind erfunden.
 - Shader-Bump verändert nur die Beleuchtung, nicht die druckbare Oberfläche.
 - Für den [Webexport](../web/README.md) werden die prozeduralen Farbmuster in
-  wiederholbare Bildtexturen gebacken. Shader-Bump und objektabhängige Wetterung
-  bleiben in der Blender-Version detailreicher als im Webmodell.
+  wiederholbare Farb- und Normalmaps gebacken. Eine separate Abschattungstextur
+  betont architektonische Vertiefungen. Objektabhängige Wetterung bleibt in der
+  Blender-Version detailreicher als im Webmodell.
 - Die `.blend` benötigt zum Anzeigen/Rendern keine Originalfotos. Für einen Neuaufbau
   fordert der bestehende Build-Workflow weiterhin die Referenz-Asset-Prüfung an.
 - `present` fügt nur für den Renderprozess einen Studioboden, Licht und Präsentationskameras

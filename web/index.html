@@ -36,10 +36,11 @@
       <p>Interaktives 3D-Modell der heutigen Außenansicht</p>
     </header>
     <section class="stage" aria-label="3D-Ansicht der Elisabethkirche">
-      <model-viewer id="church" src="assets/elisabethkirche.glb" poster="assets/preview.png"
+      <model-viewer id="church" src="assets/elisabethkirche.glb?v=2" poster="assets/preview.png"
         alt="Vereinfachtes, texturiertes 3D-Modell der Elisabethkirche Marburg mit zwei Westtürmen und Dreikonchenchor"
         camera-controls auto-rotate camera-orbit="40deg 75deg auto"
-        shadow-intensity="1" tone-mapping="neutral" exposure="0.8" touch-action="pan-y">
+        environment-image="assets/studio.hdr" shadow-intensity="1"
+        tone-mapping="neutral" exposure="1" touch-action="pan-y">
       </model-viewer>
       <div class="hint">Mit Maus oder Finger drehen · Scrollen oder zwei Finger zum Zoomen</div>
       <div id="status" role="alert"></div>

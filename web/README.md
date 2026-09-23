@@ -1,12 +1,13 @@
 # Webviewer
 
 `index.html` zeigt das texturierte Außensichtmodell mit Dreh-, Zoom- und
-Touchsteuerung. Der Viewer nutzt neutrales Tonemapping und eine moderat
-reduzierte Belichtung. Ein dunkler Hintergrund trennt das Modell klar vom
-Umfeld. Die genaue Wirkung hängt weiterhin von Browser und Bildschirm ab.
+Touchsteuerung. Der Viewer nutzt neutrales Tonemapping und die eigene gerichtete
+Studiobeleuchtung `assets/studio.hdr`. Sie macht die Ausrichtung der Fassaden
+erkennbar; die Abschattungstextur betont Vertiefungen und Bauteilübergänge.
 
-`assets/elisabethkirche.glb` enthält Geometrie und vier gebackene
-Farbbildtexturen; `assets/preview.png` ist das Vorschaubild. Es werden keine
+`assets/elisabethkirche.glb` enthält Geometrie, vier Farbbildtexturen, vier
+Normalmaps für das Fugenrelief und eine gemeinsame Ambient-Occlusion-Textur;
+`assets/preview.png` ist das Vorschaubild. Es werden keine
 Referenzfotos in das Modell übernommen. Der Viewer lädt die auf Version 4.3.1
 festgelegte `<model-viewer>`-Bibliothek von Google; zum Anzeigen ist daher eine
 Internetverbindung erforderlich.
@@ -45,13 +46,22 @@ Blender 5.2 und die Python-Projektabhängigkeiten vorausgesetzt:
 
 ```powershell
 python scripts/run_blender.py web-export
+python scripts/validate_web_export.py
 ```
 
 Standardquelle ist `blender/scene/phase_a_004.blend`, Ziel ist
 `web/assets/elisabethkirche.glb`. Mit `--scene` und `--output` lassen sich beide
-Pfade ändern. Der Export bäckt vier gemeinsame Materialmuster auf 1024²-Bilder,
-skaliert die bestehenden metrischen UVs dafür und exportiert nur die Gebäude-Meshes.
+Pfade ändern. Neben der GLB entsteht jeweils `studio.hdr`. Der Export bäckt
+Materialfarben und Tangentennormalen auf 1024²-Bilder, erhält die Materialrauheiten
+und legt für die architektonische Abschattung einen separaten 2048²-UV-Atlas an.
+Die metrischen Material-UVs bleiben der erste Texturkanal, der einmalige AO-Atlas
+ist der zweite. Das exportierte Mesh hat fünf Materialgruppen.
 Die Blender-Arbeitsdatei wird dabei nicht verändert. Eine vier Meter breite
 Texturkachel wiederholt sich; an Kachel- und Bauteilgrenzen können sichtbare
-Übergänge auftreten. Shader-Bump und die objektabhängige Wetterung sind im
-Webmodell nur angenähert. Das GLB ist ein Sichtmodell, keine Druckvorlage.
+Übergänge auftreten. Die objektabhängige Wetterung ist im Webmodell angenähert.
+AO ist eine statische Näherung für lokale Abschattung und ersetzt keinen
+vollständigen Raytracing-Renderer. Das GLB ist ein Sichtmodell, keine Druckvorlage.
+
+Die Validierung prüft die tatsächlich eingebetteten Texturkanäle und UV-Zuordnungen
+der GLB. Der kontrollierte Blender-Rückimport bestätigt die Materialien; eine
+Abnahme der Browserdarstellung erfordert weiterhin einen Blick in den Webviewer.
