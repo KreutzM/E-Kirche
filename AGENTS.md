@@ -1,7 +1,8 @@
 # Elisabethkirche Marburg Reconstruction
 
 ## Mission
-Reconstruct the **present-day EXTERIOR only** of the Elisabethkirche in Marburg as a metrically coherent Blender model. Do not model the interior in this project phase.
+Reconstruct the **present-day EXTERIOR only** of the Elisabethkirche in Marburg as a visually convincing, plausible, textured Blender model. Preserve coherent overall proportions; detailed metric accuracy is not the acceptance goal (tracking issue #9). Do not model the interior.
+Deliver a separate simplified tactile/print version for blind pupils, approximately 20 cm along its longest extent. Texture alone is not tactile geometry. Confirm printing process/material before finalizing printable detail sizes; physical print and tactile feedback remain part of final acceptance.
 
 ## Required reading before modeling
 1. `PROJECT.md`
@@ -39,7 +40,7 @@ Never present inferred geometry as measured geometry. Every inferred dimension m
 7. tracery
 8. ornament
 
-Do not begin decorative modeling until massing passes dimensional and silhouette validation.
+Before decorative modeling, review massing and characteristic silhouettes against modern photographs. Document visible discrepancies; no additional quantitative camera solve or fine dimensional certification is required. Keep documented scale anchors and distinguish visual approximations from measurements.
 
 ## Reproducibility
 - Prefer Blender Python for repeated/procedural geometry.

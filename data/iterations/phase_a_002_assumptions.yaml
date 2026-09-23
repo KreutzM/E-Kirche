@@ -1,22 +1,4 @@
 assumptions:
-  tower_buttress_width_base: {value: 2.2, unit: m, reason: "Broader paired tower corner piers inferred visually from M10/M11; independent of choir piers.", confidence: low, evidence_ids: [M10, M11], iteration: phase_a_003}
-  tower_buttress_width_mid: {value: 1.8, unit: m, reason: "Visual middle tower pier setback.", confidence: low, evidence_ids: [M10, M11], iteration: phase_a_003}
-  tower_buttress_width_top: {value: 1.35, unit: m, reason: "Upper tower pier width inferred from west silhouette.", confidence: low, evidence_ids: [M10, M11], iteration: phase_a_003}
-  tower_buttress_depth_base: {value: 3.3, unit: m, reason: "Strengthen underrepresented west tower base projections; visual approximation, not measured.", confidence: low, evidence_ids: [M09, M11], iteration: phase_a_003}
-  tower_buttress_depth_mid: {value: 2.5, unit: m, reason: "Visual middle-stage projection.", confidence: low, evidence_ids: [M09, M11], iteration: phase_a_003}
-  tower_buttress_depth_top: {value: 1.4, unit: m, reason: "Narrow upper stage projects less than lower tower piers.", confidence: low, evidence_ids: [M09, M11], iteration: phase_a_003}
-  buttress_cap_rise: {value: 0.65, unit: m, reason: "Sloping stone weatherings replace flat step tops; visually inferred.", confidence: low, evidence_ids: [M11, M16, M19], iteration: phase_a_003}
-  structural_belt_height: {value: 0.28, unit: m, reason: "Coarse horizontal stage emphasis, not a detailed cornice profile.", confidence: low, evidence_ids: [M11, M16], iteration: phase_a_003}
-  structural_belt_projection: {value: 0.22, unit: m, reason: "Visual projection of structural stage bands.", confidence: low, evidence_ids: [M11, M16], iteration: phase_a_003}
-  sacristy_window_width: {value: 2.15, unit: m, reason: "Two openings per exposed annex face, estimated from M15/M16.", confidence: low, evidence_ids: [M15, M16], iteration: phase_a_003}
-  sacristy_lower_sill_z: {value: 2.2, unit: m, reason: "Raised annex plinth and lower window register, visually inferred.", confidence: low, evidence_ids: [M16], iteration: phase_a_003}
-  sacristy_lower_top_z: {value: 6.8, unit: m, reason: "Lower pointed window envelope in two-storey annex.", confidence: low, evidence_ids: [M16], iteration: phase_a_003}
-  sacristy_upper_sill_z: {value: 8.0, unit: m, reason: "Upper annex window sill above intermediate belt.", confidence: low, evidence_ids: [M16], iteration: phase_a_003}
-  sacristy_upper_top_z: {value: 13.7, unit: m, reason: "Upper annex window apex beneath eave.", confidence: low, evidence_ids: [M16], iteration: phase_a_003}
-  turret_lantern_sill_z: {value: 35.2, unit: m, reason: "Modern ridge turret has a short open-looking lantern below helm; represented by blind dark recesses.", confidence: low, evidence_ids: [M03, M16], iteration: phase_a_003}
-  turret_lantern_head_z: {value: 37.5, unit: m, reason: "Lantern opening stops below existing 38 m helm spring.", confidence: low, evidence_ids: [M03, M16], iteration: phase_a_003}
-  turret_lantern_width: {value: 0.8, unit: m, reason: "One narrow aperture per octagonal face; visual approximation.", confidence: low, evidence_ids: [M03, M16], iteration: phase_a_003}
-  side_roof_hip_inset: {value: 0.8, unit: m, reason: "Shorter outer hip leaves fuller transverse roof silhouette as seen in aerial M01, replacing half-bay setback.", confidence: low, evidence_ids: [M01, M07], iteration: phase_a_003}
   buttress_width_base: {value: 1.3, unit: m, reason: "Coarse external buttress width inferred from P01 and repeated facade proportions.", confidence: low, evidence_ids: [P01, M05, M07], iteration: phase_a_002}
   buttress_width_mid: {value: 1.0, unit: m, reason: "Provisional middle-stage setback; not surveyed.", confidence: low, evidence_ids: [M05, M19], iteration: phase_a_002}
   buttress_width_top: {value: 0.8, unit: m, reason: "Provisional upper-stage width below cornice.", confidence: low, evidence_ids: [M05, M19], iteration: phase_a_002}

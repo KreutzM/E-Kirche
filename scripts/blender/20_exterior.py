@@ -105,7 +105,7 @@ scene.unit_settings.scale_length = 1
 scene["axis_convention"] = "X east, Y north, Z up"
 scene["origin_definition"] = "centre of crossing at nominal floor level"
 scene["iteration"] = iteration
-scene["validation_status"] = "PROVISIONAL: inspection cameras only; photographic calibration pending"
+scene["validation_status"] = "Working exterior: visual review required; no fine metric certification"
 scene["model_inputs"] = json.dumps(payload, ensure_ascii=False)
 
 w, h, shoulder = p("nave_half_width"), p("conch_half_width"), p("conch_shoulder")
@@ -184,10 +184,11 @@ for side in (-1, 1):
         # Hipped outer end; transverse ridge runs towards central nave roof.
         y0, y1 = side*h, side*(w+over)
         polygon = [(x0,y0),(x1,y0),(x1,y1),(x0,y1)]
-        apex = [((x0+x1)/2,y0,p("side_roof_ridge_z")), ((x0+x1)/2,side*(w-span/2),p("side_roof_ridge_z"))]
+        hip_inset = p("side_roof_hip_inset") if "side_roof_hip_inset" in A else span/2
+        apex = [((x0+x1)/2,y0,p("side_roof_ridge_z")), ((x0+x1)/2,side*(w-hip_inset),p("side_roof_ridge_z"))]
         roof(f"Aisle_roof_{side}_{index+1}", polygon, apex,
              [(0,1,4),(1,2,5,4),(2,3,5),(3,0,4,5)],
-             ["nave_west_x", "nave_east_x", "side_roof_bays", "side_roof_ridge_z", "nave_half_width", "conch_half_width", "roof_overhang", "wall_eave_z"])
+             ["nave_west_x", "nave_east_x", "side_roof_bays", "side_roof_ridge_z", "nave_half_width", "conch_half_width", "roof_overhang", "wall_eave_z"] + (["side_roof_hip_inset"] if "side_roof_hip_inset" in A else []))
 
 radius = p("crossing_turret_radius")
 ring = [(radius*math.cos(i*math.tau/8+math.pi/8),radius*math.sin(i*math.tau/8+math.pi/8)) for i in range(8)]

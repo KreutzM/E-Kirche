@@ -63,13 +63,21 @@ def buttress(name,centre,normal,tower=False):
     levels=[0,p("buttress_mid_z"),p("buttress_top_z"),p("wall_eave_z")]
     if tower:
         levels=[0,p("wall_eave_z"),p("main_ridge_z"),p("tower_shaft_z")]
+    prefix = "tower_buttress_" if tower and "tower_buttress_width_base" in A else "buttress_"
+    zkeys = ["wall_eave_z","main_ridge_z","tower_shaft_z"] if tower else ["buttress_mid_z","buttress_top_z","wall_eave_z"]
     for i,stage in enumerate(("base","mid","top")):
-        width=p("buttress_width_"+stage)
-        depth=p("buttress_depth_"+stage)
+        width=p(prefix+"width_"+stage)
+        depth=p(prefix+"depth_"+stage)
         poly=[(centre[0]+u*tangent[0]+d*normal[0],centre[1]+u*tangent[1]+d*normal[1])
               for u,d in ((-width/2,-0.01),(width/2,-0.01),(width/2,depth),(-width/2,depth))]
         prism(f"Buttress_{name}_{stage}",poly,levels[i+1],"BUTTRESSES",stone,
-              ["buttress_width_"+stage,"buttress_depth_"+stage,"buttress_mid_z","buttress_top_z","wall_eave_z"],bottom=levels[i])
+              [prefix+"width_"+stage,prefix+"depth_"+stage]+zkeys,bottom=levels[i])
+        if "buttress_cap_rise" in A and i < 2:
+            # Closed sloped weathering rises towards the wall, not a flat shelf.
+            z=levels[i+1]
+            vertices=[(x,y,z) for x,y in poly]+[(x,y,z+(p("buttress_cap_rise") if j in (0,1) else 0.03)) for j,(x,y) in enumerate(poly)]
+            mesh(f"Weathering_{name}_{stage}",vertices,[(3,2,1,0),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)],
+                 "BUTTRESSES",stone,[prefix+"width_"+stage,prefix+"depth_"+stage,"buttress_cap_rise"]+zkeys)
 
 
 # Nave facade modules follow the existing roof bays.
@@ -82,8 +90,9 @@ for side in (-1,1):
         buttress(f"nave_{side}_{i}",(p("nave_west_x")+i*bay,side*w),(0,side))
 
 for name,angle in (("east",0),("north",math.pi/2),("south",-math.pi/2)):
-    arc=[(shoulder+h*math.cos(-math.pi/2+i*math.pi/5),h*math.sin(-math.pi/2+i*math.pi/5)) for i in range(6)]
-    for i in range(5):
+    facets=int(p("conch_facets"))
+    arc=[(shoulder+h*math.cos(-math.pi/2+i*math.pi/facets),h*math.sin(-math.pi/2+i*math.pi/facets)) for i in range(facets+1)]
+    for i in range(facets):
         a,b=arc[i:i+2]
         length=math.dist(a,b)
         tangent=((b[0]-a[0])/length,(b[1]-a[1])/length)
@@ -119,10 +128,17 @@ for label,sign in (("north",1),("south",-1)):
         for ey in (-1,1):
             corner=(tx+ex*td/2,y+ey*tw/2)
             buttress(f"tower_{label}_{ex}_{ey}_x",corner,(ex,0),True)
-            buttress(f"tower_{label}_{ex}_{ey}_y",corner,(0,ey),True)
+            # Inward projections must not grow through the central west portal.
+            # Legacy assumptions retain the old layout for baseline reproduction.
+            if ey == sign or "tower_buttress_width_base" not in A:
+                buttress(f"tower_{label}_{ex}_{ey}_y",corner,(0,ey),True)
 
 opening(bpy.data.objects["West_hall"],"West_portal",(tx-td/2,0),(0,1),(-1,0),p("portal_width"),0,p("portal_top_z"),door,
         ["portal_width","portal_top_z"])
 opening(bpy.data.objects["West_hall"],"West_central_window",(tx-td/2,0),(0,1),(-1,0),p("portal_width"),
         p("window_upper_sill_z"),p("window_upper_top_z"),keys=["portal_width","window_upper_sill_z","window_upper_top_z"])
 print("STRUCTURAL EXTERIOR: buttresses and recessed openings generated",flush=True)
+
+if "sacristy_window_width" in A:
+    import runpy
+    runpy.run_path(str(ROOT/"scripts/blender/35_visual_form.py"), init_globals=dict(globals()))

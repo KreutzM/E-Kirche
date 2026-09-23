@@ -1,10 +1,16 @@
 """Render fixed diagnostic cameras; these are not photo-calibrated VAL views."""
 from pathlib import Path
+import json
+import os
 
 import bpy
 
 ROOT = Path(__file__).resolve().parents[2]
 scene = bpy.context.scene
+settings=json.loads(os.environ["EKIRCHE_INSPECTION_JSON"])
+scene.render.resolution_x,scene.render.resolution_y=settings["resolution"]
+scene.render.resolution_percentage=100
+scene.render.film_transparent=False
 out = ROOT / "validation/renders" / scene.get("iteration", "unversioned")
 out.mkdir(parents=True, exist_ok=True)
 cameras = sorted((o for o in scene.objects if o.type == "CAMERA" and o.name.startswith("INSPECT_")), key=lambda o: o.name)

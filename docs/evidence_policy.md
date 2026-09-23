@@ -13,6 +13,11 @@ Strong structural evidence, particularly for plan/section logic. They are histor
 Use as scale anchors with their stated scope. Interior dimensions must not be silently treated as exterior dimensions.
 
 ## Inference
+
+Per issue #9, visual plausibility takes priority over fine metric reconstruction.
+Approximation is acceptable when it preserves recognizable forms. Existing camera fits
+may support comparisons but are not certification. Log qualitative review outcomes and
+remaining visible differences. Do not change documentary measurements to match an artistic choice.
 Inference is allowed when necessary, but must be explicit in `data/assumptions.yaml`. Confidence should be high/medium/low and supporting evidence IDs must be listed.
 
 Each entry under `assumptions` is keyed by a stable ID and requires `value` (finite
