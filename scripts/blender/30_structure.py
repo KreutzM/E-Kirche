@@ -7,6 +7,7 @@ import bpy
 
 glass = material("Unresolved exterior glazing (neutral)", (0.035,0.05,0.06))
 door = material("West door placeholder (no sculpture)", (0.13,0.035,0.025))
+opening_specs=[]
 
 
 def local_polygon(points, centre, tangent, normal, depth):
@@ -49,6 +50,7 @@ def opening(target, name, centre, tangent, normal, width, bottom, top, mat=glass
     bpy.data.objects.remove(cutter,do_unlink=True)
     panel=shaped_prism(name,profile,centre,tangent,normal,-recess,-recess+0.01,mat,list(keys)+["opening_recess"])
     panel["evidence_status"]="inferred exterior recess with opaque backing; glazing pattern unresolved"
+    opening_specs.append(dict(name=name,centre=centre,tangent=tangent,normal=normal,width=width,bottom=bottom,top=top,keys=list(keys)))
 
 
 def two_windows(target,name,centre,tangent,normal,width=None):
@@ -142,3 +144,6 @@ print("STRUCTURAL EXTERIOR: buttresses and recessed openings generated",flush=Tr
 if "sacristy_window_width" in A:
     import runpy
     runpy.run_path(str(ROOT/"scripts/blender/35_visual_form.py"), init_globals=dict(globals()))
+if "tracery_radius" in A:
+    runpy.run_path(str(ROOT/"scripts/blender/40_details.py"), init_globals=dict(globals()))
+    runpy.run_path(str(ROOT/"scripts/blender/50_materials.py"), init_globals=dict(globals()))
