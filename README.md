@@ -112,8 +112,8 @@ Reproduktion mit vorhandenen Referenzbildern und neuen Ausgabepfaden:
 ```powershell
 python -m pip install -r requirements-calibration.txt
 python scripts/prepare_calibration_views.py
-python scripts/solve_cameras.py --output phase_a_002
-python scripts/run_blender.py build --structure --iteration phase_a_002 --output tmp/rebuild_structure.blend
+python scripts/solve_cameras.py --assumptions data/iterations/phase_a_002_assumptions.yaml --output phase_a_002
+python scripts/run_blender.py build --structure --iteration phase_a_002 --assumptions data/iterations/phase_a_002_assumptions.yaml --output tmp/rebuild_structure.blend
 python scripts/run_blender.py calibrate --scene tmp/rebuild_structure.blend --cameras validation/reports/phase_a_002/camera_solutions.json --output tmp/rebuild_calibrated.blend
 python scripts/run_blender.py render --scene tmp/rebuild_calibrated.blend
 python scripts/photo_overlays.py phase_a_002
