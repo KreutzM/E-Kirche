@@ -25,9 +25,9 @@ def find_blender(explicit=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("task", choices=("smoke", "scene", "render", "build", "inspect", "calibrate", "verify-form", "present"))
+    parser.add_argument("task", choices=("smoke", "scene", "render", "build", "inspect", "calibrate", "verify-form", "present", "web-export"))
     parser.add_argument("--blender")
-    parser.add_argument("--output", type=Path, help="New .blend for build (never overwritten)")
+    parser.add_argument("--output", type=Path, help="New .blend for build, or destination .glb for web-export")
     parser.add_argument("--scene", type=Path, help="Existing .blend to inspect/render")
     parser.add_argument("--cameras", type=Path, help="Camera solution JSON for calibrate")
     parser.add_argument("--iteration", default="phase_a_002")
@@ -52,9 +52,11 @@ def main():
             payload[name] = yaml.safe_load((ROOT / path).read_text(encoding="utf-8"))
         env["EKIRCHE_MODEL_JSON"] = json.dumps(payload)
         env["EKIRCHE_OUTPUT"] = str((args.output or ROOT / "blender/scene" / f"{args.iteration}.blend").resolve())
+    if args.task == "web-export":
+        env["EKIRCHE_OUTPUT"] = str((args.output or ROOT / "web/assets/elisabethkirche.glb").resolve())
     cmd = [find_blender(args.blender), "--background"]
-    scene = args.scene or ROOT / ("blender/scene/phase_a_001.blend" if args.task == "inspect" else "blender/scene/elisabethkirche.blend")
-    if args.task in ("render", "inspect", "calibrate", "verify-form", "present"):
+    scene = args.scene or ROOT / ("blender/scene/phase_a_001.blend" if args.task == "inspect" else "blender/scene/phase_a_004.blend" if args.task == "web-export" else "blender/scene/elisabethkirche.blend")
+    if args.task in ("render", "inspect", "calibrate", "verify-form", "present", "web-export"):
         if not scene.exists():
             raise SystemExit("Scene missing; build and calibrate the model first.")
         cmd += [str(scene.resolve())]
@@ -66,7 +68,7 @@ def main():
             raise SystemExit("Scene already exists; preserve it before explicitly rebuilding.")
         scripts = ["00_scene_setup.py", "10_massing.py"]
     else:
-        scripts = [{"smoke": "smoke_test.py", "render": "90_validation.py", "build": "20_exterior.py", "inspect": "80_inspection.py", "calibrate": "70_photo_cameras.py", "verify-form": "85_verify_form.py", "present": "95_presentation.py"}[args.task]]
+        scripts = [{"smoke": "smoke_test.py", "render": "90_validation.py", "build": "20_exterior.py", "inspect": "80_inspection.py", "calibrate": "70_photo_cameras.py", "verify-form": "85_verify_form.py", "present": "95_presentation.py", "web-export": "96_web_export.py"}[args.task]]
     for script in scripts:
         cmd += ["--python", str(ROOT / "scripts/blender" / script)]
     return subprocess.run(cmd, cwd=ROOT, env=env).returncode
